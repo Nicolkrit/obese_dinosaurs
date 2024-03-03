@@ -1,0 +1,133 @@
+# Path to your oh-my-zsh installation.
+ZSH=/usr/share/oh-my-zsh/
+
+# Path to powerlevel10k theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# List of plugins used
+plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
+# In case a command is not found, try to find the package that has it
+function command_not_found_handler {
+    local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
+    printf 'zsh: command not found: %s\n' "$1"
+    local entries=( ${(f)"$(/usr/bin/pacman -F --machinereadable -- "/usr/bin/$1")"} )
+    if (( ${#entries[@]} )) ; then
+        printf "${bright}$1${reset} may be found in the following packages:\n"
+        local pkg
+        for entry in "${entries[@]}" ; do
+            local fields=( ${(0)entry} )
+            if [[ "$pkg" != "${fields[2]}" ]] ; then
+                printf "${purple}%s/${bright}%s ${green}%s${reset}\n" "${fields[1]}" "${fields[2]}" "${fields[3]}"
+            fi
+            printf '    /%s\n' "${fields[4]}"
+            pkg="${fields[2]}"
+        done
+    fi
+    return 127
+}
+
+# Detect the AUR wrapper
+if pacman -Qi yay &>/dev/null ; then
+   aurhelper="yay"
+elif pacman -Qi paru &>/dev/null ; then
+   aurhelper="paru"
+fi
+
+function in {
+    local pkg="$1"
+    if pacman -Si "$pkg" &>/dev/null ; then
+        sudo pacman -S "$pkg"
+    else
+        "$aurhelper" -S "$pkg"
+    fi
+}
+
+# Helpful aliases
+#alias  l='eza -lh  --icons=auto' # long list
+#alias ls='eza -1   --icons=auto' # short list
+#alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+#alias ld='eza -lhD --icons=auto' # long list dirs
+#alias un='$aurhelper -Rns' # uninstall package
+#alias up='$aurhelper -Syu' # update system/package/aur
+#alias pl='$aurhelper -Qs' # list installed package
+#alias pa='$aurhelper -Ss' # list availabe package
+#alias pc='$aurhelper -Sc' # remove unused cache
+#alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
+#alias vc='code --disable-gpu' # gui code editor
+
+
+
+# Personal aliases
+alias sudo='sudo '
+alias ls='exa -al --color=always --group-directories-first'
+alias ll='ls -l'
+alias la='ls -A'
+alias upd='sudo pacman -Syu'
+alias updnew='sudo pacman -Syuu && sudo pacman -Syu'
+alias yaynew='yay -Syuu && yay -Syu'
+alias yaycache='yay -Scc'
+alias c='clear'
+alias boxesdog='echo "I am a dog" | boxes -d dog -a c'
+alias cv='cava'
+alias r='source ~/.zshrc'
+alias reb='reboot'
+alias del='sudo rm -rf'
+alias cp='cp -i'
+alias mkdir='mkdir -pv'
+alias h='history'
+alias which='type -a'
+alias shut='shutdown -h now'
+alias inst='sudo pacman -S'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias erep='egrep --color=auto'
+alias neo='neofetch'
+alias untar='tar -zsvf'
+alias pac='sudo pacman -S'
+alias gac='git add -A && git commit -m "various" && git push'
+alias at='ssh nicolk@atelier.inf.usi.ch'
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+alias usiinf='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf'
+alias usiinfgeneral='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0000_General'
+alias usiinf1='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS12/0001\ Semester\ 1\ 2022'
+alias usiinf2='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS12/0002\ Semester\ 2\ 2023'
+alias usiinf3='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS34/0000_Third_Semester_2023'
+alias usiinf4='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS34/0001_Fourth_Semester_2024'
+alias isiinfss='cd /home/krit/0000_Github_Repos/0001_USI/0001_Semester_Specific'
+alias downloads='cd ~/Downloads'
+alias setup='cd /home/krit/0000_Github_Repos/0000_Linux_Setup'
+alias config='cd ~/.config/'
+alias lib='cd /usr/lib'
+alias hymonitors='hyprctl monitors'
+alias hyclients='hyprctl clients'
+alias pipes1='pipes.sh -t1'
+alias pipes2='pipes.sh -t2'
+alias pipes3='pipes.sh -t3'
+alias pipes4='pipes.sh -t4'
+alias pipes5='pipes.sh -t5'
+alias pipes6='pipes.sh -t6'
+alias pipes7='pipes.sh -t7'
+alias pipes8='pipes.sh -t8'
+alias pipes9='pipes.sh -t9'
+alias infbonsai='cbonsai -S'
+alias pokdialga='pokemon-colorscripts --name dialga'
+alias search='yay -Ss'
+alias y='yay'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#Display Pokemon
+#pokemon-colorscripts --no-title -r 1,3,6
+
+#Display pokemon when not in visual studio code
+if [ "$TERM_PROGRAM" != "code" ]; then
+    pokemon-colorscripts --no-title -r 1,3,6
+fi

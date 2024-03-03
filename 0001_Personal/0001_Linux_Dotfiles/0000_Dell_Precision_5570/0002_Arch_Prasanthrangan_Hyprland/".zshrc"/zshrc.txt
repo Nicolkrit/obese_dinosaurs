@@ -1,0 +1,227 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+ZSH=/usr/share/oh-my-zsh/
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+function command_not_found_handler {
+    local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
+    printf 'zsh: command not found: %s\n' "$1"
+    local entries=( ${(f)"$(/usr/bin/pacman -F --machinereadable -- "/usr/bin/$1")"} )
+    if (( ${#entries[@]} )) ; then
+        printf "${bright}$1${reset} may be found in the following packages:\n"
+        local pkg
+        for entry in "${entries[@]}" ; do
+            local fields=( ${(0)entry} )
+            if [[ "$pkg" != "${fields[2]}" ]] ; then
+                printf "${purple}%s/${bright}%s ${green}%s${reset}\n" "${fields[1]}" "${fields[2]}" "${fields[3]}"
+            fi
+            printf '    /%s\n' "${fields[4]}"
+            pkg="${fields[2]}"
+        done
+    fi
+    return 127
+}
+
+function in {
+    local pkg="$1"
+    if pacman -Si "$pkg" &>/dev/null ; then
+        sudo pacman -S "$pkg"
+    elif pacman -Qi yay &>/dev/null ; then
+        yay -S "$pkg"
+    elif pacman -Qi paru &>/dev/null ; then
+        paru -S "$pkg"
+    fi
+}
+
+# Cava, broken
+#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    #tmux new-session -d -s cava_session 'cava'
+#fi
+
+
+# Personal aliases
+alias sudo='sudo '
+alias ls='exa -al --color=always --group-directories-first'
+alias ll='ls -l'
+alias la='ls -A'
+alias upd='sudo pacman -Syu'
+alias updnew='sudo pacman -Syuu && sudo pacman -Syu'
+alias yaynew='yay -Syuu && yay -Syu'
+alias yaycache='yay -Scc'
+alias c='clear'
+alias boxesdog='echo "I am a dog" | boxes -d dog -a c'
+alias cv='cava'
+alias r='source ~/.zshrc'
+alias reb='reboot'
+alias del='sudo rm -rf'
+alias cp='cp -i'
+alias mkdir='mkdir -pv'
+alias h='history'
+alias which='type -a'
+alias shut='shutdown -h now'
+alias inst='sudo pacman -S'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias erep='egrep --color=auto'
+alias neo='neofetch'
+alias untar='tar -zsvf'
+alias pac='sudo pacman -S'
+alias gac='git add -A && git commit -m "directory management" && git push'
+alias clone='git clone'
+alias giturl='git remote set-url origin'
+alias at='ssh nicolk@atelier.inf.usi.ch'
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+alias usiinf='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf'
+alias usiinfgeneral='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0000_General'
+alias usiinf1='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS12/0001B\ Semester\ 1\ 2023'
+alias usiinf2='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS12/0002B\ Semester\ 2\ 2024'
+alias usiinf3='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS34/0000_Third_Semester_2023'
+alias usiinf4='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS34/0001_Fourth_Semester_2024'
+alias isiinfss='cd /home/krit/0000_Github_Repos/0001_USI/0001_Semester_Specific'
+alias downloads='cd ~/Downloads'
+alias setup='cd /home/krit/0000_Github_Repos/0000_Linux_Setup'
+alias config='cd ~/.config/'
+alias lib='cd /usr/lib'
+alias hymonitors='hyprctl monitors'
+alias hyclients='hyprctl clients'
+alias pipes1='pipes.sh -t1'
+alias pipes2='pipes.sh -t2'
+alias pipes3='pipes.sh -t3'
+alias pipes4='pipes.sh -t4'
+alias pipes5='pipes.sh -t5'
+alias pipes6='pipes.sh -t6'
+alias pipes7='pipes.sh -t7'
+alias pipes8='pipes.sh -t8'
+alias pipes9='pipes.sh -t9'
+alias infbonsai='cbonsai -S'
+alias pokdialga='pokemon-colorscripts --name dialga'
+alias search='yay -Ss'
+alias y='yay'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#Display specs
+#neofetch
+
+#Display Pokemon
+#pokemon-colorscripts --no-title -r 1,3,6
+
+#Display pokemon when not in visual studio code
+if [ "$TERM_PROGRAM" != "code" ]; then
+    pokemon-colorscripts --no-title -r 1,3,6
+fi
+
+
+
+
+#Display random gifs
+#kitten icat --align left $(find $HOME/.config/neofetch/gifs/ -name "*.gif" | sort -R | head -1)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2023-10-30 14:01:59
+export PATH="$PATH:/home/krit/.local/bin"
+eval $(thefuck --alias)

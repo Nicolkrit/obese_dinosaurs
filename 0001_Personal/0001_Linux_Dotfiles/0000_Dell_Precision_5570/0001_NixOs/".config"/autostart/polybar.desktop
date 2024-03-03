@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=polybar
+Icon=
+Name=polybar
+Path=
+Terminal=True
+Type=Application

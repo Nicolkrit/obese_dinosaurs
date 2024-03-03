@@ -1,0 +1,10 @@
+0|Catppuccin-Mocha|~/.config/swww/Catppuccin-Mocha/firewatch.jpg
+0|Catppuccin-Latte|~/.config/swww/Catppuccin-Latte/anime_girl_blue2.jpg
+0|Decay-Green|~/.config/swww/Decay-Green/srev.png
+0|Rose-Pine|~/.config/swww/Rose-Pine/gta_vi_vice.png
+1|Tokyo-Night|~/.config/swww/Tokyo-Night/tokyo_pink.png
+0|Material-Sakura|~/.config/swww/Material-Sakura/iusearchbtw.jpg
+0|Graphite-Mono|~/.config/swww/Graphite-Mono/chainsawman_sketch.png
+0|Cyberpunk-Edge|~/.config/swww/Cyberpunk-Edge/lucy_rebecca.jpg
+0|Frosted-Glass|~/.config/swww/Frosted-Glass/corndog.png
+0|Gruvbox-Retro|~/.config/swww/Gruvbox-Retro/pokemon.jpg
