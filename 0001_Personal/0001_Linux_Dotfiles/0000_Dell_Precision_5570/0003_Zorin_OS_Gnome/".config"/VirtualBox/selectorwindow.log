@@ -1,0 +1,21 @@
+00:00:00.284592 VirtualBox GUI VM Selector Window 7.0.14 r161095 linux.amd64 (Jan 15 2024 15:20:58) release log
+00:00:00.284595 Log opened 2024-03-27T00:01:59.996550000Z
+00:00:00.284595 Build Type: release
+00:00:00.284604 OS Product: Linux
+00:00:00.284605 OS Release: 6.5.0-26-generic
+00:00:00.284606 OS Version: #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Mar 12 10:22:43 UTC 2
+00:00:00.284656 DMI Product Name: Precision 5570
+00:00:00.284670 DMI Product Version: 
+00:00:00.284684 Firmware type: UEFI
+00:00:00.285920 Secure Boot: Disabled
+00:00:00.285997 Host RAM: 63965MB (62.4GB) total, 60479MB (59.0GB) available
+00:00:00.286005 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.286006 Process ID: 31060
+00:00:00.286007 Package type: LINUX_64BITS_UBUNTU_22_04
+00:00:00.286075 Qt version: 5.15.3
+00:00:00.286893 GUI: UIMediumEnumerator: Initial medium-enumeration finished!
+00:00:00.311834 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.311874 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:01.234790 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 0x32 x 1920x1168
+00:00:04.593327 GUI: UICommon: Handling aboutToQuit request..
+00:00:05.329090 GUI: UICommon: aboutToQuit request handled!

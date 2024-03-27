@@ -1,0 +1,87 @@
+alias sudo='sudo '
+alias ls='exa -al --color=always --group-directories-first'
+alias ll='ls -l'
+alias la='ls -A'
+alias upd='sudo apt update && sudo apt upgrade'
+alias search='apt-cache search'
+alias c='clear'
+alias boxesdog='echo "I am a dog" | boxes -d dog -a c'
+alias cv='cava'
+alias zshrc='source ~/.zshrc'
+alias reb='reboot'
+alias del='sudo rm -r'
+alias cp='cp -i'
+alias mkdir='mkdir -pv'
+alias h='history'
+alias which='type -a'
+alias shut='shutdown -h now'
+alias inst='sudo apt install'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias resolvedep='sudo apt install -f -y'
+alias erep='egrep --color=auto'
+alias neo='neofetch'
+alias untar='tar -zsvf'
+alias gac='git add -A && git commit -m "general commit" && git push'
+alias clone='git clone'
+alias giturl='git remote set-url origin'
+alias checkout='git checkout'
+alias usiatelier='ssh nicolk@atelier.inf.usi.ch'
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+alias usiinf='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf'
+alias usiinfgeneral='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0001_General'
+alias usiinf1='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0002_Bachelor/USIinfBS12/0001B\ Semester\ 1\ 2023'
+alias usiinf2='cd /home/krit/0001_Github_Repos/0002_USI/0000_Usi_Inf/0002_Bachelor/USIinfBS12/0002B\ Semester\ 2\ 2024'
+alias usiinf3='cd /home/krit/0001_Github_Repos/0002_USI/0000_Usi_Inf/0002_Bachelor/USIinfBS34/0000_Third_Semester_2023'
+alias usiinf4='cd /home/krit/0001_Github_Repos/0002_USI/0000_Usi_Inf/0002_Bachelor/USIinfBS34/0001_Fourth_Semester_2024'
+alias usiinfss='cd /home/krit/0001_Github_Repos/0002_USI/0002_Semester_Specific'
+alias downloads='cd ~/Downloads'
+alias setup='cd /home/krit/0001_Github_Repos/0001_Linux_Setup'
+alias config='cd ~/.config/'
+alias lib='cd /usr/lib'
+alias etc='cd /etc'
+alias share='cd /usr/share'
+alias pipes1='pipes.sh -t1'
+alias pipes2='pipes.sh -t2'
+alias pipes3='pipes.sh -t3'
+alias pipes4='pipes.sh -t4'
+alias pipes5='pipes.sh -t5'
+alias pipes6='pipes.sh -t6'
+alias pipes7='pipes.sh -t7'
+alias pipes8='pipes.sh -t8'
+alias pipes9='pipes.sh -t9'
+alias infbonsai='cbonsai -S'
+alias pokdialga='pokemon-colorscripts --name dialga'
+alias java17='sudo update-java-alternatives --set java-1.17.0-openjdk-amd64'
+alias java21='sudo update-java-alternatives --set java-1.21.0-openjdk-amd64'
+
+
+
+#Display pokemon when not in visual studio code
+if [ "$TERM_PROGRAM" != "code" ]; then
+    pokemon-colorscripts --no-title -r 1,3,6
+fi
+
+#thefuck
+export PATH="$PATH:/home/krit/.local/bin"
+eval $(thefuck --alias)
+
+# Starship
+eval "$(starship init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/krit/.bun/_bun" ] && source "/home/krit/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$PATH:/usr/bin/Postman"
