@@ -21,7 +21,7 @@ alias fgrep='fgrep --color=auto'
 alias resolvedep='sudo apt install -f -y'
 alias erep='egrep --color=auto'
 alias neo='neofetch'
-alias untar='tar -zsvf'
+alias untar='tar -xzvf'
 alias gac='git add -A && git commit -m "general commit" && git push'
 alias clone='git clone'
 alias giturl='git remote set-url origin'
@@ -35,15 +35,19 @@ alias .5='cd ../../../../..'
 alias .6='cd ../../../../../..'
 alias usiinf='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf'
 alias usiinfgeneral='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0001_General'
-alias usiinf1='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0002_Bachelor/USIinfBS12/0001B\ Semester\ 1\ 2023'
-alias usiinf2='cd /home/krit/0001_Github_Repos/0002_USI/0000_Usi_Inf/0002_Bachelor/USIinfBS12/0002B\ Semester\ 2\ 2024'
-alias usiinf3='cd /home/krit/0001_Github_Repos/0002_USI/0000_Usi_Inf/0002_Bachelor/USIinfBS34/0000_Third_Semester_2023'
-alias usiinf4='cd /home/krit/0001_Github_Repos/0002_USI/0000_Usi_Inf/0002_Bachelor/USIinfBS34/0001_Fourth_Semester_2024'
+alias usiinf1='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0002_Bachelor/USIinfBS12/0001_Semester_1_2022'
+alias usiinf1b='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0002_Bachelor/USIinfBS12/0001B_Semester_1_2023'
+alias usiinf2='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0002_Bachelor/USIinfBS12/0002_Semester_2_2023'
+alias usiinf2b='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0002_Bachelor/USIinfBS12/0002B_Semester_2_2024'
+alias usiinf3='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0002_Bachelor/USIinfBS34/0000_Third_Semester_2023'
+alias usiinf4='cd /home/krit/0001_Github_Repos/0002_USI/0001_Usi_Inf/0002_Bachelor/USIinfBS34/0001_Fourth_Semester_2024'
 alias usiinfss='cd /home/krit/0001_Github_Repos/0002_USI/0002_Semester_Specific'
-alias downloads='cd ~/Downloads'
+alias usiinfos='cd /home/krit/0001_Github_Repos/0002_USI/0003_Other_Students'
+alias down='cd ~/Downloads'
 alias setup='cd /home/krit/0001_Github_Repos/0001_Linux_Setup'
 alias config='cd ~/.config/'
 alias lib='cd /usr/lib'
+alias ~='cd ~'
 alias etc='cd /etc'
 alias share='cd /usr/share'
 alias pipes1='pipes.sh -t1'
@@ -59,7 +63,7 @@ alias infbonsai='cbonsai -S'
 alias pokdialga='pokemon-colorscripts --name dialga'
 alias java17='sudo update-java-alternatives --set java-1.17.0-openjdk-amd64'
 alias java21='sudo update-java-alternatives --set java-1.21.0-openjdk-amd64'
-
+alias edex='cd ~/Applications/ && ./EDEX-UI.appimage'
 
 
 #Display pokemon when not in visual studio code
@@ -85,3 +89,15 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:/usr/bin/Postman"
+
+
+
+# Setting up environment variables for Java 17
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+
+# Alternatively, for Java 21
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+
+
