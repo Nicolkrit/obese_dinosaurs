@@ -39,7 +39,7 @@ function in {
     local pkg="$1"
     if pacman -Si "$pkg" &>/dev/null ; then
         sudo pacman -S "$pkg"
-    else
+    else 
         "$aurhelper" -S "$pkg"
     fi
 }
@@ -63,6 +63,7 @@ function in {
 alias sudo='sudo '
 alias ls='exa -al --color=always --group-directories-first'
 alias ll='ls -l'
+alias clone='git clone'
 alias la='ls -A'
 alias upd='sudo pacman -Syu'
 alias updnew='sudo pacman -Syuu && sudo pacman -Syu'
@@ -71,7 +72,7 @@ alias yaycache='yay -Scc'
 alias c='clear'
 alias boxesdog='echo "I am a dog" | boxes -d dog -a c'
 alias cv='cava'
-alias r='source ~/.zshrc'
+alias zshrc='source ~/.zshrc'
 alias reb='reboot'
 alias del='sudo rm -rf'
 alias cp='cp -i'
@@ -86,7 +87,10 @@ alias erep='egrep --color=auto'
 alias neo='neofetch'
 alias untar='tar -zsvf'
 alias pac='sudo pacman -S'
-alias gac='git add -A && git commit -m "various" && git push'
+alias gac='git add -A && git commit -m "directory management" && git push'
+alias gitkeep='find . -type d -empty -not -path "./.git/*" -exec touch {}/.gitkeep \;'
+alias gpamaster='cd /home/krit/0000_Github_Repos && ./gitpullmaster.sh'
+alias gpamain='cd /home/krit/0000_Github_Repos && ./gitpullmain.sh'
 alias at='ssh nicolk@atelier.inf.usi.ch'
 alias .1='cd ..'
 alias .2='cd ../..'
@@ -96,8 +100,8 @@ alias .5='cd ../../../../..'
 alias .6='cd ../../../../../..'
 alias usiinf='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf'
 alias usiinfgeneral='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0000_General'
-alias usiinf1='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS12/0001\ Semester\ 1\ 2022'
-alias usiinf2='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS12/0002\ Semester\ 2\ 2023'
+alias usiinf1='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS12/0001B\ Semester\ 1\ 2023'
+alias usiinf2='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS12/0002B\ Semester\ 2\ 2024'
 alias usiinf3='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS34/0000_Third_Semester_2023'
 alias usiinf4='cd /home/krit/0000_Github_Repos/0001_USI/0000_Usi_Inf/0001_Bachelor/USIinfBS34/0001_Fourth_Semester_2024'
 alias isiinfss='cd /home/krit/0000_Github_Repos/0001_USI/0001_Semester_Specific'
@@ -120,6 +124,12 @@ alias infbonsai='cbonsai -S'
 alias pokdialga='pokemon-colorscripts --name dialga'
 alias search='yay -Ss'
 alias y='yay'
+alias mysql='/usr/bin/mysql'
+alias mariadb='/usr/bin/mariadb'
+alias java17='sudo archlinux-java set java-17-temurin'
+alias java22='sudo archlinux-java set java-22-openjdk'
+alias hyprlandconf=' nvim ~/.config/hypr/hyprland.conf'
+alias hyprlandkeybindings='nvim ~/.config/hypr/keybindings.conf'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
