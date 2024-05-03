@@ -17,7 +17,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = none
+    follow = mouse
 
     ### Geometry ###
 
@@ -64,7 +64,7 @@
     progress_bar_corner_radius = 4
 
     # Corner radius for the icon image.
-    icon_corner_radius = 0
+    icon_corner_radius = 7
 
     # Show how many messages are currently hidden (because of
     # notification_limit).
@@ -92,7 +92,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 5
 
     # Defines color of the frame around the notification window.
     #frame_color = "#eba0ac"
@@ -217,7 +217,7 @@
     max_icon_size = 128
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /usr/share/icons/Tela-circle-dracula/16/actions:/usr/share/icons/Tela-circle-dracula/16/apps:/usr/share/icons/Tela-circle-dracula/16/devices:/usr/share/icons/Tela-circle-dracula/16/mimetypes:/usr/share/icons/Tela-circle-dracula/16/panel:/usr/share/icons/Tela-circle-dracula/16/places:/usr/share/icons/Tela-circle-dracula/16/status
+    icon_path = /home/krit/.icons/Tela-circle-dracula/16/actions:/home/krit/.icons/Tela-circle-dracula/16/apps:/home/krit/.icons/Tela-circle-dracula/16/devices:/home/krit/.icons/Tela-circle-dracula/16/mimetypes:/home/krit/.icons/Tela-circle-dracula/16/panel:/home/krit/.icons/Tela-circle-dracula/16/places:/home/krit/.icons/Tela-circle-dracula/16/status
 
     ### History ###
 
@@ -231,7 +231,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/rofi -dmenu -p dunst:
+    dmenu = /usr/bin/rofi -config "/home/krit/.config/rofi/notification.rasi" -dmenu -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/xdg-open
@@ -250,7 +250,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 7
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -445,21 +445,19 @@
     background = "#f5e0dc"
     foreground = "#1e1e2e"
     frame_color = "#f38ba8"
-    icon = "~/.config/dunst/icons/critical.svg"
+    icon = "/home/krit/.config/dunst/icons/critical.svg"
     timeout = 0
-    # Icon for notifications with critical urgency, uncomment to enable
-    #default_icon = /path/to/icon
 
 [urgency_low]
-    background = "#82828280"
-    foreground = "#FCFCFCE6"
-    frame_color = "#94949480"
-    icon = "~/.config/dunst/icons/hyprdots.svg"
+    background = "#6588A380"
+    foreground = "#294052E6"
+    frame_color = "#6588A303"
+    icon = "/home/krit/.config/dunst/icons/hyprdots.svg"
     timeout = 5
 
 [urgency_normal]
-    background = "#2B2B2B80"
-    foreground = "#FCFCFCE6"
-    frame_color = "#63636380"
-    icon = "~/.config/dunst/icons/hyprdots.svg"
+    background = "#AAD1F080"
+    foreground = "#294052E6"
+    frame_color = "#AAD1F003"
+    icon = "/home/krit/.config/dunst/icons/hyprdots.svg"
     timeout = 5
