@@ -160,3 +160,7 @@ alias mkdir='mkdir -p'
 
 #Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
+
+# nvm for software atelier 3
+source /usr/share/nvm/init-nvm.sh
+export GITLAB_ACCESS_TOKEN=glpat-5Az2eKcVDyp3QND11Btv
