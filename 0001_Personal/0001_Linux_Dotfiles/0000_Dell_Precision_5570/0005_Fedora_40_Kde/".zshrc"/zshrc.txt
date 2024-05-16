@@ -127,6 +127,7 @@ alias mysql='/usr/bin/mysql'
 alias mariadb='/usr/bin/mariadb'
 alias java21='sudo alternatives --set java /usr/lib/jvm/java-21-openjdk-21.0.3.0.9-1.fc40.x86_64/bin/java'
 alias java17='sudo alternatives --set java /usr/lib/jvm/java-17-openjdk-17.0.10.0.7-3.fc40.x86_64/bin/java'
+alias mongofix='cd /var/lib/mongo && sudo chown -R krit:krit /var/lib/mongo && sudo chown krit:krit /tmp/mongodb-27017.sock ||cd /var/lib/mongo && sudo rm -r mongod.lock'
 
 
 
