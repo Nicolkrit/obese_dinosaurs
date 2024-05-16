@@ -200,9 +200,7 @@ alias pokdialga='pokemon-colorscripts --name dialga'
 #Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
 
-# nvm for software atelier 4
-source /usr/share/nvm/init-nvm.sh
-export GITLAB_ACCESS_TOKEN=glpat-5Az2eKcVDyp3QND11Btv
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -217,3 +215,7 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# Gitlab token for SA4
+export GITLAB_ACCESS_TOKEN=glpat-5Az2eKcVDyp3QND11Btv
