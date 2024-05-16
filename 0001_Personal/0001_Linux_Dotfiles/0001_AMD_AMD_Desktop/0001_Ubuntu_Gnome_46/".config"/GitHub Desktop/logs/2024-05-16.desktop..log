@@ -1,0 +1,155 @@
+2024-05-16T21:00:50.860Z - info: [ui] [AppStore] loading 0 repositories from store
+2024-05-16T21:00:50.883Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2024-05-16T21:00:50.884Z - info: [ui] launching: 3.3.12-linux2 (Linux 6.8.0-31-generic)
+2024-05-16T21:00:50.884Z - info: [ui] execPath: '/usr/lib/github-desktop/github-desktop'
+2024-05-16T21:00:50.916Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2024-05-16T21:00:51.285Z - info: [ui] Opt in reported.
+2024-05-16T21:00:53.500Z - info: [ui] [Welcome] advancing to step: SignInToDotComWithBrowser
+2024-05-16T21:00:53.500Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:00:53.505Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=96f760c4-8b4f-41a2-ad9d-f399036e49c6
+2024-05-16T21:00:53.505Z - info: [ui] [Welcome] current sign in state not found. ignoring...
+2024-05-16T21:00:59.174Z - info: [ui] [Welcome] kind Authentication is the same as Authentication. ignoring...
+2024-05-16T21:01:00.505Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:01:00.505Z - info: [main] Processing protocol url
+2024-05-16T21:01:00.505Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:01:00.510Z - info: [ui] [Welcome] kind Authentication is the same as Authentication. ignoring...
+2024-05-16T21:01:00.590Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:01:00.592Z - info: [main] Processing protocol url
+2024-05-16T21:01:01.448Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:01:01.448Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:01:01.454Z - info: [ui] [Welcome] advancing to step: ConfigureGit
+2024-05-16T21:01:01.476Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2024-05-16T21:01:31.058Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:01:31.060Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=bbab6e93-bf98-4744-90ad-cbc9bde85e7f
+2024-05-16T21:01:31.707Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:01:31.707Z - info: [main] Processing protocol url
+2024-05-16T21:01:31.707Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:01:31.785Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:01:31.787Z - info: [main] Processing protocol url
+2024-05-16T21:01:32.412Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:01:32.412Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:01:46.188Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:01:46.190Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=89db13f7-7257-4d80-88fd-bd003ef94d1f
+2024-05-16T21:01:46.745Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:01:46.745Z - info: [main] Processing protocol url
+2024-05-16T21:01:46.746Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:01:46.829Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:01:46.832Z - info: [main] Processing protocol url
+2024-05-16T21:01:47.382Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:01:47.382Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:01:58.368Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:01:58.371Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=641fed03-c677-4109-9ce8-a02afa79bf6b
+2024-05-16T21:01:58.914Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:01:58.915Z - info: [main] Processing protocol url
+2024-05-16T21:01:58.915Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:01:59.004Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:01:59.006Z - info: [main] Processing protocol url
+2024-05-16T21:01:59.605Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:01:59.605Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:02:10.023Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:02:10.029Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=4b076b49-b475-4e8d-b0e5-2e9f2d6de05a
+2024-05-16T21:02:10.631Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:02:10.631Z - info: [main] Processing protocol url
+2024-05-16T21:02:10.631Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:02:10.723Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:02:10.726Z - info: [main] Processing protocol url
+2024-05-16T21:02:11.316Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:02:11.316Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:02:36.635Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:02:36.635Z - info: [main] Processing protocol url
+2024-05-16T21:02:36.635Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:02:36.641Z - warn: [ui] requestAuthenticatedUser was not called with valid OAuth state. This is likely due to a browser reloading the callback URL. Contact GitHub Support if you believe this is an error
+2024-05-16T21:02:36.725Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:02:36.727Z - info: [main] Processing protocol url
+2024-05-16T21:02:43.346Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:02:43.353Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=804faf29-5b52-4fe8-a6a2-fa3080b35672
+2024-05-16T21:02:43.897Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:02:43.897Z - info: [main] Processing protocol url
+2024-05-16T21:02:43.897Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:02:43.949Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:02:43.978Z - info: [main] Processing protocol url
+2024-05-16T21:02:44.765Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:02:44.765Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:04:39.661Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:04:39.664Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=a85e3467-c559-4a02-929c-05d899a54d77
+2024-05-16T21:04:40.330Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:04:40.331Z - info: [main] Processing protocol url
+2024-05-16T21:04:40.331Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:04:40.404Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:04:40.406Z - info: [main] Processing protocol url
+2024-05-16T21:04:41.206Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:04:41.206Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:05:12.774Z - info: [ui] [AppStore] loading 0 repositories from store
+2024-05-16T21:05:12.835Z - info: [ui] launching: 3.3.12-linux2 (Linux 6.8.0-31-generic)
+2024-05-16T21:05:12.835Z - info: [ui] execPath: '/usr/lib/github-desktop/github-desktop'
+2024-05-16T21:05:13.338Z - info: [ui] Stats reported.
+2024-05-16T21:05:17.351Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:05:17.354Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=84c3f5f2-db10-41e8-9610-0d5912b699e0
+2024-05-16T21:05:17.955Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:05:17.955Z - info: [main] Processing protocol url
+2024-05-16T21:05:17.956Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:05:18.016Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:05:18.045Z - info: [main] Processing protocol url
+2024-05-16T21:05:18.821Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:05:18.821Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:13:37.973Z - info: [ui] [AppStore] loading 0 repositories from store
+2024-05-16T21:13:38.001Z - info: [ui] launching: 3.3.12-linux2 (Linux 6.8.0-31-generic)
+2024-05-16T21:13:38.001Z - info: [ui] execPath: '/usr/lib/github-desktop/github-desktop'
+2024-05-16T21:13:42.299Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:13:42.303Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=a53d448e-7624-4438-bfb1-0155c90824cc
+2024-05-16T21:13:54.272Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:13:54.272Z - info: [main] Processing protocol url
+2024-05-16T21:13:54.272Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:13:54.369Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:13:54.372Z - info: [main] Processing protocol url
+2024-05-16T21:13:55.198Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:13:55.198Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:14:04.767Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:14:04.770Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=c570c715-78c4-4093-b4db-61567d24805e
+2024-05-16T21:14:05.378Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:14:05.379Z - info: [main] Processing protocol url
+2024-05-16T21:14:05.379Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:14:05.432Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:14:05.460Z - info: [main] Processing protocol url
+2024-05-16T21:14:06.072Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:14:06.072Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:14:26.441Z - info: [ui] [AppStore] loading 0 repositories from store
+2024-05-16T21:14:26.465Z - info: [ui] launching: 3.3.12-linux2 (Linux 6.8.0-31-generic)
+2024-05-16T21:14:26.466Z - info: [ui] execPath: '/usr/lib/github-desktop/github-desktop'
+2024-05-16T21:14:30.712Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:14:30.715Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=b0345d7a-e77a-4b72-bc6d-3b694ac3ee42
+2024-05-16T21:14:31.400Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:14:31.400Z - info: [main] Processing protocol url
+2024-05-16T21:14:31.401Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:14:31.456Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:14:31.484Z - info: [main] Processing protocol url
+2024-05-16T21:14:32.309Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:14:32.310Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:16:02.958Z - info: [ui] [AppStore] loading 0 repositories from store
+2024-05-16T21:16:02.984Z - info: [ui] launching: 3.3.12-linux2 (Linux 6.8.0-31-generic)
+2024-05-16T21:16:02.984Z - info: [ui] execPath: '/usr/lib/github-desktop/github-desktop'
+2024-05-16T21:16:09.196Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:16:09.199Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=9265f983-dc02-4e7b-93d1-3aad6be3e3ff
+2024-05-16T21:16:19.309Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:16:19.309Z - info: [main] Processing protocol url
+2024-05-16T21:16:19.309Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:16:19.404Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:16:19.407Z - info: [main] Processing protocol url
+2024-05-16T21:16:20.164Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:16:20.165Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:19:28.555Z - info: [ui] [AppStore] loading 0 repositories from store
+2024-05-16T21:19:28.612Z - info: [ui] launching: 3.3.12-linux2 (Linux 6.8.0-31-generic)
+2024-05-16T21:19:28.613Z - info: [ui] execPath: '/usr/lib/github-desktop/github-desktop'
+2024-05-16T21:24:14.902Z - info: [ui] [AppStore] loading 0 repositories from store
+2024-05-16T21:24:14.932Z - info: [ui] launching: 3.3.12-linux2 (Linux 6.8.0-31-generic)
+2024-05-16T21:24:14.932Z - info: [ui] execPath: '/usr/lib/github-desktop/github-desktop'
+2024-05-16T21:24:22.995Z - info: [ui] [SignInStore] initializing OAuth flow
+2024-05-16T21:24:22.998Z - info: [main] opening in browser: https://github.com/login/oauth/authorize?client_id=3a723b10ac5575cc5bb9&scope=repo%20user%20workflow&state=d4e45dd2-cb40-413b-8109-4bed272a7677
+2024-05-16T21:24:25.076Z - info: [main] Received possible protocol arguments: 3
+2024-05-16T21:24:25.076Z - info: [main] Processing protocol url
+2024-05-16T21:24:25.077Z - info: [ui] [Dispatcher] requesting authenticated user
+2024-05-16T21:24:25.172Z - info: [main] Received possible protocol arguments: 2
+2024-05-16T21:24:25.174Z - info: [main] Processing protocol url
+2024-05-16T21:24:25.904Z - info: [ui] [SignInStore] account resolved
+2024-05-16T21:24:25.905Z - info: [ui] [AppStore] adding account nicolkrit999 (Krit Pio Nicol) to store
+2024-05-16T21:24:26.250Z - info: [ui] Subscribed 'nicolkrit999' to Alive channel
