@@ -1,0 +1,44 @@
+title: Sweet_Pop!
+
+author: PROxZIMA
+
+tagline: A minimalist animated oneliner theme for Firefox perfectly matching Sweet Dark. 
+
+description: Sweet_Pop! Beautify, Customize Firefox. Minimalist animated oneliner theme for Firefox perfectly matching Sweet Dark.
+
+url: https://proxzima.ml/Sweet-Pop/
+
+twitter: https://twitter.com/pro_x_zima
+
+logo: "assets/Sweet_Pop.png"
+
+round-avatar: true
+
+image: "assets/preview.png"
+
+# Google Analytics ID
+google_analytics: UA-228707195-1
+
+# GitHub Values
+github:
+  owner_name: PROxZIMA
+  owner_url: https://github.com/PROxZIMA/
+  repository_url: https://github.com/PROxZIMA/Sweet-Pop/
+
+show_downloads: true
+
+show_header: true
+
+remote_theme: "dracula/gh-pages"
+
+markdown: CommonMarkGhPages
+
+commonmark:
+  options: ["UNSAFE", "SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+sass:
+    style: compressed
+
+plugins:
+  - jekyll-seo-tag

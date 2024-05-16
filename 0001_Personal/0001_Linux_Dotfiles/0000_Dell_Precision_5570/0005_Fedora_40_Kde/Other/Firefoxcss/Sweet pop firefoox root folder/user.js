@@ -1,0 +1,1 @@
+/home/krit/.mozilla/firefox/d4vrz81w.default-release/chrome/programs/user.js

@@ -1,0 +1,4 @@
+-Xmx2048m
+-Dide.managed.by.toolbox=/home/krit/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+-Dtoolbox.notification.token=1e1fa2d2-b702-4b0b-897f-7d9915dc9368
+-Dtoolbox.notification.portFile=/home/krit/.cache/JetBrains/Toolbox/ports/717825600.port

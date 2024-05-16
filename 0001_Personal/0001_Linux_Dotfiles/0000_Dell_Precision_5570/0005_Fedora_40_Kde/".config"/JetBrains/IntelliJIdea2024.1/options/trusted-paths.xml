@@ -1,0 +1,16 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$USER_HOME$/0001_Github_Repos/0001_USI/0002_Semester_Specific/0004_Semester_4/SA4/0001_Project/0001_Main_Directories/backend" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="Trusted.Paths.Settings">
+    <option name="TRUSTED_PATHS">
+      <list>
+        <option value="$USER_HOME$/0001_Github_Repos/0001_USI/0002_Semester_Specific/0004_Semester_4/SA4/0001_Project/0001_Main_Directories" />
+      </list>
+    </option>
+  </component>
+</application>

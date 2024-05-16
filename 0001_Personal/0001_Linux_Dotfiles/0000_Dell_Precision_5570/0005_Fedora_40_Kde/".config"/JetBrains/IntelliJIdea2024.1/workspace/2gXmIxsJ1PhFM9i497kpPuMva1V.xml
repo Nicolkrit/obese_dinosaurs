@@ -1,0 +1,128 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="backend" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf ideFingerprint="3042ruu65hsqs">
+      <file>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]" selected="true">
+            <state split_layout="SHOW_PREVIEW" is_vertical_split="false">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary"><![CDATA[{
+  "data": {
+    "Markdown": {
+      "usageCount": 1,
+      "lastUsed": 1715852226578
+    }
+  }
+}]]></component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="Markdown">
+      <summary usageCount="1" lastUsage="1715852226580" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunConfigurationStartHistory">
+    <history>
+      <element setting="Spring Boot.Lab02SpringApplication" />
+    </history>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="699000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2408854" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Run" order="4" show_stripe_button="false" weight="0.32969433" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Build" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info active="true" anchor="right" id="AIAssistant" order="1" visible="true" weight="0.2408854" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <unified_weights bottom="0.32969433" left="0.2408854" right="0.2408854" />
+    </layoutV2>
+    <recentWindows>
+      <value>Run</value>
+      <value>AIAssistant</value>
+      <value>Project</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1818" height="324" key="GridCell.Tab.0.bottom" timestamp="1715853053978">
+      <screen x="0" y="0" width="1920" height="1145" />
+    </state>
+    <state width="1818" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1145@0.0.1920.1145" timestamp="1715853053978" />
+    <state width="1818" height="324" key="GridCell.Tab.0.center" timestamp="1715853053978">
+      <screen x="0" y="0" width="1920" height="1145" />
+    </state>
+    <state width="1818" height="324" key="GridCell.Tab.0.center/0.0.1920.1145@0.0.1920.1145" timestamp="1715853053978" />
+    <state width="1818" height="324" key="GridCell.Tab.0.left" timestamp="1715853053978">
+      <screen x="0" y="0" width="1920" height="1145" />
+    </state>
+    <state width="1818" height="324" key="GridCell.Tab.0.left/0.0.1920.1145@0.0.1920.1145" timestamp="1715853053978" />
+    <state width="1818" height="324" key="GridCell.Tab.0.right" timestamp="1715853053978">
+      <screen x="0" y="0" width="1920" height="1145" />
+    </state>
+    <state width="1818" height="324" key="GridCell.Tab.0.right/0.0.1920.1145@0.0.1920.1145" timestamp="1715853053978" />
+    <state width="1818" height="324" key="GridCell.Tab.1.bottom" timestamp="1715853053979">
+      <screen x="0" y="0" width="1920" height="1145" />
+    </state>
+    <state width="1818" height="324" key="GridCell.Tab.1.bottom/0.0.1920.1145@0.0.1920.1145" timestamp="1715853053979" />
+    <state width="1818" height="324" key="GridCell.Tab.1.center" timestamp="1715853053978">
+      <screen x="0" y="0" width="1920" height="1145" />
+    </state>
+    <state width="1818" height="324" key="GridCell.Tab.1.center/0.0.1920.1145@0.0.1920.1145" timestamp="1715853053978" />
+    <state width="1818" height="324" key="GridCell.Tab.1.left" timestamp="1715853053978">
+      <screen x="0" y="0" width="1920" height="1145" />
+    </state>
+    <state width="1818" height="324" key="GridCell.Tab.1.left/0.0.1920.1145@0.0.1920.1145" timestamp="1715853053978" />
+    <state width="1818" height="324" key="GridCell.Tab.1.right" timestamp="1715853053978">
+      <screen x="0" y="0" width="1920" height="1145" />
+    </state>
+    <state width="1818" height="324" key="GridCell.Tab.1.right/0.0.1920.1145@0.0.1920.1145" timestamp="1715853053978" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SHOW_PREVIEW" is_vertical_split="false">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
