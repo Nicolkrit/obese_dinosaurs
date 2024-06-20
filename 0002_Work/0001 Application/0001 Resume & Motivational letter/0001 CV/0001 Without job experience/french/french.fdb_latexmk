@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1718886768.32409 "/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/english/english.tex" "english.pdf" "english" 1718886768.54488 0
-  "/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/english/english.tex" 1718886768.19184 5396 3b902a8ec44c968eddb865f26293e11b ""
+["pdflatex"] 1718886776.04135 "/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/french/french.tex" "french.pdf" "french" 1718886776.29727 0
+  "/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/french/french.tex" 1718879270 4907 93bd25313f8c7127be74fbb2b03d440a ""
   "/opt/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1708878492 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1708878492 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1708878492 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -15,6 +15,12 @@
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1708878492 35752 024fb6c41858982481f6968b5fc26508 ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1708878492 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb" 1708878492 145929 f25e56369a345c4ff583b067cd87ce8e ""
+  "/opt/texlive/2023/texmf-dist/tex/generic/babel-french/francais.ldf" 1708878492 1298 45154793fe21ec29afc82ab772dbbd28 ""
+  "/opt/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf" 1708878492 67406 dceb79d013836a96b38471bc632b9fc3 ""
+  "/opt/texlive/2023/texmf-dist/tex/generic/babel/babel.sty" 1708878492 146276 10a40dabec03ce18494af0c3a51bcbdc ""
+  "/opt/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-fr.ini" 1708878492 5918 0f6ad8bc9a16ae22ee21685f58ff516d ""
+  "/opt/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex" 1708878492 2133 44b1afb9708604e2ff17e4a838a966b6 ""
+  "/opt/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def" 1708878492 6948 df63e25be1d2bc35bbad5a0141f41348 ""
   "/opt/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty" 1708878492 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "/opt/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty" 1708878492 1057 525c2192b5febbd8c1f662c9468335bb ""
   "/opt/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1708878492 2222 499d61426192c39efd8f410ee1a52b9c ""
@@ -23,7 +29,9 @@
   "/opt/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty" 1708878492 4474 b811654f4bf125f11506d13d13647efb ""
   "/opt/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty" 1708878492 2444 0d0c1ee65478277e8015d65b86983da2 ""
   "/opt/texlive/2023/texmf-dist/tex/latex/base/article.cls" 1708878492 20144 147463a6a579f4597269ef9565205cfe ""
+  "/opt/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty" 1708878492 5048 425739d70251273bf93e3d51f3c40048 ""
   "/opt/texlive/2023/texmf-dist/tex/latex/base/size11.clo" 1708878492 8464 59874a3b0776c73e2a138b025d8473dd ""
+  "/opt/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty" 1708878492 1360 df2086bf924b14b72d6121fe9502fcdb ""
   "/opt/texlive/2023/texmf-dist/tex/latex/comment/comment.sty" 1708878492 10197 204f75d5d8d88aa345a8c402e879e63b ""
   "/opt/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty" 1708878492 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "/opt/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty" 1708878492 41601 9cf6c5257b1bc7af01a58859749dd37a ""
@@ -38,10 +46,10 @@
   "/opt/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1708878492 5472557 cc5a885b8b9392bc1b69c74b1c554d60 ""
   "/opt/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1708878492 8221035 ad1dda8bb58c69af7ce4a327b76833a3 ""
   "/opt/texlive/2023/texmf.cnf" 1708878492 585 cbdac2c540e67e6925735bc924caa885 ""
-  "english.aux" 1718886768.52184 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "english.tex" 1718886768.19184 5396 3b902a8ec44c968eddb865f26293e11b ""
+  "french.aux" 1718886776.27177 191 cc05f1c3c96c05274f355007dd1b830b "pdflatex"
+  "french.tex" 1718879270 4907 93bd25313f8c7127be74fbb2b03d440a ""
   (generated)
-  "english.aux"
-  "english.log"
-  "english.pdf"
+  "french.aux"
+  "french.log"
+  "french.pdf"
   (rewritten before read)

@@ -3,8 +3,8 @@ entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/english/english.tex"
-(/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/english/english.tex
+**"/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/french/french.tex"
+(/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/french/french.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/opt/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -226,27 +226,77 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \RaggedLeftParindent=\skip71
 \RaggedRightParindent=\skip72
 \JustifyingParindent=\skip73
-) (/opt/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count289
-\l__pdf_internal_box=\box103
-) (./english.aux)
-\openout1 = `english.aux'.
+) (/opt/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks27
+\inpenc@posthook=\toks28
+) (/opt/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/02/07 v24.2 The Babel package
+\babel@savecnt=\count289
+\U@D=\dimen175
+\l@unhyphenated=\language89
+ (/opt/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count290
+ (/opt/texlive/2023/texmf-dist/tex/generic/babel-french/francais.ldf
+Language: francais 2023-12-19 v3.5r French support from the babel system
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+
+Package francais.ldf Warning: Option `francais' for Babel is *deprecated*,
+(francais.ldf)                it might be removed sooner or later. Please
+(francais.ldf)                use `french' instead; reported on input line 31.
+
+(/opt/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2023-12-19 v3.5r French support from the babel system
+Package babel Info: Hyphen rules for 'acadian' set to \l@french
+(babel)             (\language31). Reported on input line 91.
+Package babel Info: Hyphen rules for 'canadien' set to \l@french
+(babel)             (\language31). Reported on input line 92.
+\FB@stdchar=\count291
+Package babel Info: Making : an active character on input line 420.
+Package babel Info: Making ; an active character on input line 421.
+Package babel Info: Making ! an active character on input line 422.
+Package babel Info: Making ? an active character on input line 423.
+\FBguill@level=\count292
+\FBold@everypar=\toks29
+\FB@Mht=\dimen176
+\mc@charclass=\count293
+\mc@charfam=\count294
+\mc@charslot=\count295
+\std@mcc=\count296
+\dec@mcc=\count297
+\FB@parskip=\dimen177
+\listindentFB=\dimen178
+\descindentFB=\dimen179
+\labelindentFB=\dimen180
+\labelwidthFB=\dimen181
+\leftmarginFB=\dimen182
+\parindentFFN=\dimen183
+\FBfnindent=\dimen184
+))) (/opt/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty) (/opt/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count298
+\l__pdf_internal_box=\box103
+) (./french.aux (/opt/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex
+Package babel Info: Importing font and identification data for french
+(babel)             from babel-fr.ini. Reported on input line 11.
+))
+\openout1 = `french.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -282,22 +332,55 @@ LaTeX Font Info:    ... okay on input line 17.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \degres on input line 16.
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 16.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 16.
+LaTeX Info: Redefining \up on input line 16.
+
+Package french.ldf Warning: OT1 encoding should not be used for French.
+(french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
+(french.ldf)                of your document; reported on input line 16.
+
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 20.
+(Font)              size <17.28> substituted on input line 19.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 20.
+(Font)              size <17.28> substituted on input line 19.
 
 Excluding 'comment' comment. [1
 
 {/opt/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 126--130
-\OT1/cmr/m/n/10.95 problem-solving skills and
+Underfull \hbox (badness 5637) in paragraph at lines 113--117
+\OT1/cmr/m/n/10.95 probl^^Remes et ma r^^Seflexion
  []
 
-[2] (./english.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--125
+\OT1/cmr/m/n/10.95 Participer ^^Ra des ac-ti-vit^^Ses
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--125
+\OT1/cmr/m/n/10.95 d'^^Sequipe pour am^^Seliorer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--125
+\OT1/cmr/m/n/10.95 la com-mu-ni-ca-tion et les
+ []
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 121--125
+\OT1/cmr/m/n/10.95 comp^^Setences de tra-vail en
+ []
+
+[2] (./french.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -309,15 +392,15 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 2766 strings out of 474137
- 43824 string characters out of 5721853
- 1932187 words of memory out of 5000000
- 25120 multiletter control sequences out of 15000+600000
+ 4615 strings out of 474137
+ 75796 string characters out of 5721853
+ 1933187 words of memory out of 5000000
+ 26943 multiletter control sequences out of 15000+600000
  560575 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,5n,65p,415b,167s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,5n,65p,425b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on english.pdf (2 pages, 74771 bytes).
+Output written on french.pdf (2 pages, 73027 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream

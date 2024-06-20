@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1718886768.32409 "/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/english/english.tex" "english.pdf" "english" 1718886768.54488 0
-  "/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/english/english.tex" 1718886768.19184 5396 3b902a8ec44c968eddb865f26293e11b ""
+["pdflatex"] 1718886871.50241 "/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/italian/italian.tex" "italian.pdf" "italian" 1718886871.72308 0
+  "/home/krit/0000_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0002_Work/0001 Application/0001 Resume & Motivational letter/0001 CV/0001 Without job experience/italian/italian.tex" 1718886871.36762 4714 d4c30c57fe681a09cccf13ac27ac26f0 ""
   "/opt/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1708878492 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1708878492 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1708878492 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -38,10 +38,10 @@
   "/opt/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1708878492 5472557 cc5a885b8b9392bc1b69c74b1c554d60 ""
   "/opt/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1708878492 8221035 ad1dda8bb58c69af7ce4a327b76833a3 ""
   "/opt/texlive/2023/texmf.cnf" 1708878492 585 cbdac2c540e67e6925735bc924caa885 ""
-  "english.aux" 1718886768.52184 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "english.tex" 1718886768.19184 5396 3b902a8ec44c968eddb865f26293e11b ""
+  "italian.aux" 1718886871.70095 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "italian.tex" 1718886871.36762 4714 d4c30c57fe681a09cccf13ac27ac26f0 ""
   (generated)
-  "english.aux"
-  "english.log"
-  "english.pdf"
+  "italian.aux"
+  "italian.log"
+  "italian.pdf"
   (rewritten before read)
