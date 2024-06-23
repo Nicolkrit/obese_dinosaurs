@@ -177,6 +177,15 @@ alias hyclients='hyprctl clients' # Display currently open applications
 alias hyprlandconf=' nvim ~/.config/hypr/hyprland.conf' # Neovim into the hyprland base configuration
 alias hyprlandkeybindings='nvim ~/.config/hypr/keybindings.conf' # Neovim into the hyprland base keybindings configuration
 
+
+
+# HyDE specific commands
+alias sddmtheme='Hyde sddm theme' # Change sddm theme
+alias HyDEupd='cd ~/HyDE/Scripts && git pull && ./install.sh -r' # Update last changes from HyDE and put old configurations in ~/.config/cfg_backups
+alias HyDErestore='Hyde restore ...' # Update last changes from HyDE with restore and backup options
+
+
+
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir) (original from HyDE) 
 #alias mkdir='mkdir -p' , already present, ignored
 
