@@ -1,30 +1,30 @@
 
 :root {
-	--accent-color: #AAD1F0;
-	--border-color: #CAD7E1;
-	--background-1: #CAD7E1;
-	--background-2: #AAD1F0;
-	--background-tertiary: #CCE9FF;
-	--background-mentioned: #9AC5E6 !important;
-	--background-mentioned-hover: #7AA3C2 !important;
-	--background-modifier-hover: #7AA2C2 !important;
-	--background-modifier-active: #7A9DC2 !important;
-	--text-normal: #070706 !important;
-	--text-positive: #294052 !important;
-	--text-muted: #294052 !important;
-	--text-link: #293D52 !important;
-	--button-background: #CAD7E1 !important;
-	--button-background-hover: #CAD7E1 !important;
-	--button-background-active: #CAD7E1 !important;
-	--button-accent: #CAD7E1 !important;
-	--button-accent-hover: #CAD7E1 !important;
-	--button-accent-active: #CAD7E1 !important;
-	--button-destructive: #CAD7E1 !important;
-	--button-destructive-hover: #CAD7E1 !important;
-	--button-destructive-active: #CAD7E1 !important;
-	--settings-icon-color: #CAD7E1 !important;
-	--tab-selected: #CAD7E1 !important;
-	--switch: #CAD7E1 !important;
+	--accent-color: #3A3A6B;
+	--border-color: #1E1E2E;
+	--background-1: #1E1E2E;
+	--background-2: #3A3A6B;
+	--background-tertiary: #292952;
+	--background-mentioned: #4B4B7D !important;
+	--background-mentioned-hover: #575E8F !important;
+	--background-modifier-hover: #57658F !important;
+	--background-modifier-active: #59578F !important;
+	--text-normal: #FFFFFF !important;
+	--text-positive: #CCD2FF !important;
+	--text-muted: #CCD9FF !important;
+	--text-link: #CECCFF !important;
+	--button-background: #1E1E2E !important;
+	--button-background-hover: #1E1E2E !important;
+	--button-background-active: #1E1E2E !important;
+	--button-accent: #1E1E2E !important;
+	--button-accent-hover: #1E1E2E !important;
+	--button-accent-active: #1E1E2E !important;
+	--button-destructive: #1E1E2E !important;
+	--button-destructive-hover: #1E1E2E !important;
+	--button-destructive-active: #1E1E2E !important;
+	--settings-icon-color: #1E1E2E !important;
+	--tab-selected: #1E1E2E !important;
+	--switch: #1E1E2E !important;
 
 	--background-primary: var(--background-1);
 	--background-primary-alt: var(--background-1);
@@ -67,6 +67,6 @@
 	--background-secondary: var(--background-tertiary);
 	--background-secondary-alt: var(--background-tertiary);
 	--background-floating: var(--background-2);
-	--background-mentioned: #9AC4E6 !important;
-	--background-mentioned-hover: #7AA3C2 !important;	
+	--background-mentioned: #4B517D !important;
+	--background-mentioned-hover: #575E8F !important;	
 }
