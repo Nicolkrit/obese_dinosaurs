@@ -1,3 +1,0 @@
-2024-06-23 17:24:30.593 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/krit/--ozone-platform-hint=wayland","scheme":"file"},"type":1,"exists":false},{"fileUri":{"$mid":1,"path":"/home/krit/--disable-gpu","scheme":"file"},"type":1,"exists":false},{"fileUri":{"$mid":1,"path":"/home/krit/.zshrc","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
-2024-06-23 17:24:30.733 [info] Started local extension host with pid 161808.
-2024-06-23 17:24:33.359 [info] [perf] Render performance baseline is 15ms
