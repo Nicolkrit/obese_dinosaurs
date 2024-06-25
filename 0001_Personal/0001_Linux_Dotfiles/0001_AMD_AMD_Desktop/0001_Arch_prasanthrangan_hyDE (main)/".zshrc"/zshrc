@@ -183,7 +183,7 @@ alias hyprlandkeybindings='nvim ~/.config/hypr/keybindings.conf' # Neovim into t
 alias sddmtheme='Hyde sddm theme' # Change sddm theme
 alias HyDEupd='cd ~/HyDE/Scripts && git pull && ./install.sh -r' # Update last changes from HyDE and put old configurations in ~/.config/cfg_backups
 alias HyDErestore='Hyde restore ...' # Update last changes from HyDE with restore and backup options
-
+alias HyDEthemes='Hyde theme patch' # Go again through the installation of themes and choice of sddm themes
 
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir) (original from HyDE) 
