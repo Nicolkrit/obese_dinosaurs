@@ -1,0 +1,52 @@
+{
+	"window-size": {
+		"width": 1890,
+		"height": 1018
+	},
+	"window-maximized": false,
+	"window-position": {
+		"x": 20,
+		"y": 20
+	},
+	"url": "https://music.youtube.com/watch?v=HfuqZ9eOpgs&list=RDAMVMICHD7t6KDCM&index=0",
+	"options": {
+		"tray": false,
+		"appVisible": true,
+		"autoUpdates": true,
+		"alwaysOnTop": false,
+		"hideMenu": false,
+		"hideMenuWarned": false,
+		"startAtLogin": false,
+		"disableHardwareAcceleration": false,
+		"removeUpgradeButton": false,
+		"restartOnConfigChanges": false,
+		"trayClickPlayPause": false,
+		"autoResetAppCache": false,
+		"resumeOnStart": true,
+		"likeButtons": "",
+		"proxy": "",
+		"startingPage": "",
+		"overrideUserAgent": false,
+		"usePodcastParticipantAsArtist": false,
+		"themes": [
+			"/home/krit/0001_Github_Repos/0002_Personal_Repos/obese_dinosaurs/0001_Personal/0001_Linux_Dotfiles/0001_AMD_AMD_Desktop/0001_Arch_prasanthrangan_hyDE (main)/Other/Th ch youtube music/0001_Catppuccin/0002_Mocha_Mauve/mocha.css"
+		]
+	},
+	"plugins": {
+		"notifications": {},
+		"video-toggle": {
+			"mode": "custom"
+		},
+		"precise-volume": {
+			"globalShortcuts": {}
+		},
+		"discord": {
+			"listenAlong": true
+		}
+	},
+	"__internal__": {
+		"migrations": {
+			"version": "3.3.12"
+		}
+	}
+}
