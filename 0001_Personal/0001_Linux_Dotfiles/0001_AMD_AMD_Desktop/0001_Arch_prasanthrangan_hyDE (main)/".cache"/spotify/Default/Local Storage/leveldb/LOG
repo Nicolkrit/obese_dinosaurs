@@ -1,0 +1,6 @@
+2024/06/25-19:17:04.671 2fd1b Reusing MANIFEST /home/krit/.cache/spotify/Default/Local Storage/leveldb/MANIFEST-000001
+2024/06/25-19:17:04.673 2fd1b Recovering log #3
+2024/06/25-19:17:04.674 2fd1b Reusing old log /home/krit/.cache/spotify/Default/Local Storage/leveldb/000003.log 
+2024/06/25-19:18:04.728 2fd1b Level-0 table #5: started
+2024/06/25-19:18:04.736 2fd1b Level-0 table #5: 28966 bytes OK
+2024/06/25-19:18:04.738 2fd1b Delete type=0 #3

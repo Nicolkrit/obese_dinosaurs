@@ -1,0 +1,176 @@
+(function(){function i(l,m){var k,o=window,n=l.split("."),j=n.length;
+for(k=0;
+k<j;
+k++){if(k===j-1){o[n[k]]=m;
+}else{if(!o[n[k]]){o[n[k]]={};
+}}o=o[n[k]];
+}}function a(k){var j,m=window,l=k.split(".");
+for(j=0;
+j<l.length;
+j++){m=m[l[j]];
+if(m===undefined){break;
+}}return m;
+}function e(j,k){return function(){var l=arguments;
+require(uwr.config.require,[j],function(m){m[k].apply(null,l);
+});
+};
+}function d(l){var k=l.module,n=l.namespace,q=l.apiFunctions,m,j=q.length;
+for(m=0;
+m<j;
+m++){var o=q[m],p=e(k,o);
+i(n+"."+o,p);
+}}function b(){var j=document.getElementsByTagName("script"),k,n,m="",l,o;
+for(l=0;
+l<j.length;
+l++){k=j.item(l);
+n=k.src;
+if(n&&(o=n.indexOf("/uwr.js"))!==-1){m=n.substring(0,o);
+break;
+}}return m;
+}function c(j,k){return k+"/"+j;
+}function f(j){if(typeof j==="function"){require(uwr.config.require,["uwr/jquery"],function(k){j(k);
+});
+}}function h(k){var j=k.cssClass,l=k.namespace;
+require(uwr.config.require,["uwr/common"],function(m){m.registerWidgetType(j,l);
+});
+}function g(){var l,j,k,m;
+if(arguments.length===0||typeof arguments[0]!=="object"){return;
+}l=arguments[0];
+for(j=1;
+j<arguments.length;
+j++){k=arguments[j];
+if(typeof k!=="object"){continue;
+}for(m in k){if(k.hasOwnProperty(m)){l[m]=k[m];
+}}}return l;
+}i("uwr.util.assign",i);
+i("uwr.util.retrieve",a);
+i("uwr.util.shortcut",d);
+i("uwr.util.getUwrResourcePath",b);
+i("uwr.util.modulePath",c);
+i("uwr.util.jquery",f);
+i("uwr.util.registerWidgetType",h);
+i("uwr.util.merge",g);
+})();
+(function(){var a="5.0.1";
+function c(){if(typeof uwr==="object"&&typeof uwr.config==="object"){uwr.util.assign("uwr._runtime.config",uwr.config);
+}}function b(){if(arguments.length===1){return uwr.util.retrieve("uwr._runtime.config."+arguments[0]);
+}else{if(arguments.length===2){uwr.util.assign("uwr._runtime.config."+arguments[0],arguments[1]);
+}}}function d(g){require(uwr.config.require,["uwr/common"],function(h){h.initAllWidgetTypes(g);
+});
+}function f(g){if(typeof g==="function"){require(uwr.config.require,["uwr/highcharts","uwr/jquery","uwr/highchartsUbsTheme"],function(h,i){g(h,i);
+});
+}}function e(g){require(uwr.config.require,["uwr/initState"],function(h){h.addReadyHandler(g);
+});
+}c();
+uwr.util.assign("uwr.version",a);
+uwr.util.assign("uwr.config",b);
+uwr.util.assign("uwr.init",d);
+uwr.util.assign("uwr.highcharts",f);
+uwr.util.assign("uwr.ready",e);
+})();
+(function(){uwr.config("cookie.locale","uwrlocale");
+uwr.config("i18n",{"en":{"datepicker":{"done":"Done","legendText":"Bank holiday","months":"January,February,March,April,May,June,July,August,September,October,November,December","monthsShort":"Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec","selectMonth":"Select month","today":"Today","todayAbbrev":"Today","weekdaysShort":"M,T,W,T,F,S,S"}},"de":{"datepicker":{"done":"Fertig","legendText":"Bankfeiertag","months":"Januar,Februar,M\xe4rz,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember","monthsShort":"Jan,Feb,Mrz,Apr,Mai,Jun,Jul,Aug,Sep,Okt,Nov,Dez","selectMonth":"Monat ausw\xe4hlen","today":"Heute","todayAbbrev":"Heute","weekdaysShort":"M,D,M,D,F,S,S"}},"fr":{"datepicker":{"done":"OK","legendText":"Jour f\xe9ri\xe9","months":"Janvier,F\xe9vrier,Mars,Avril,Mai,Juin,Juillet,Ao\xfbt,Septembre,Octobre,Novembre,D\xe9cembre","monthsShort":"Janv,F\xe9vr,Mars,Avr,Mai,Juin,Juil,Ao\xfbt,Sept,Oct,Nov,D\xe9c","selectMonth":"S\xe9lectionner un mois","today":"Aujourd'hui","todayAbbrev":"auj.","weekdaysShort":"L,M,M,J,V,S,D"}},"it":{"datepicker":{"done":"Fine","legendText":"Giorno festivo","months":"Gennaio,Febbraio,Marzo,Aprile,Maggio,Giugno,Luglio,Agosto,Settembre,Ottobre,Novembre,Dicembre","monthsShort":"Gen,Feb,Mar,Apr,Mag,Giu,Lug,Ago,Set,Ott,Nov,Dic","selectMonth":"Selezionare mese","today":"Oggi","todayAbbrev":"Oggi","weekdaysShort":"L,M,M,G,V,S,D"}}});
+})();
+(function(){var e=uwr.util.getUwrResourcePath(),c=uwr.config("require"),d,b,f,a={highcharts:"4.2.3"};
+d={context:"uwr",baseUrl:e,paths:{"uwr/jquery":"external/jquery-1.12.1/jquery-1.12.1-migrate.min.uwr","uwr/chosen":"external/chosen.jquery-1.0.0/chosen.jquery.min.amd","uwr/highcharts":"external/highcharts-"+a.highcharts+"/js/highcharts-uw4.amd","uwr/highcharts/mapdata/custom/world-lowres":"external/highcharts-"+a.highcharts+"/mapdata/custom/world-lowres.amd","uwr/highcharts/mapdata/custom/world-highres":"external/highcharts-"+a.highcharts+"/mapdata/custom/world-highres.amd","uwr/highcharts/mapdata/custom/world-custom":"shared/mapdata/custom/world-custom.amd","uwr/moment":"external/moment-2.8.3/moment.min.amd","uwr/mustache":"external/mustache-0.8.1/mustache-0.8.1-min","uwr/qtip2":"external/qtip2.jquery-2.2.1/jquery.qtip.min.amd","uwr/common":"shared/modules/common","uwr/cookie":"shared/modules/cookie","uwr/frames":"shared/modules/frames","uwr/i18n":"shared/modules/i18n","uwr/initState":"shared/modules/initState","uwr/template":"shared/modules/template","uwr/truncate":"shared/modules/jquery.truncate.amd","uwr/advancedDropdown":"widgets/AdvancedDropdown/js/advancedDropdown","uwr/dropdown":"widgets/Dropdown/js/dropdown","uwr/dropdownView":"widgets/Dropdown/js/dropdownView","uwr/datePicker":"widgets/DatePicker/js/datePicker","uwr/datePickerCalendar":"widgets/DatePicker/js/datePickerCalendar","uwr/datePickerIcon":"widgets/DatePicker/js/datePickerIcon","uwr/datePickerTooltip":"widgets/DatePicker/js/datePickerTooltip","uwr/datePickerUtil":"widgets/DatePicker/js/datePickerUtil","uwr/datePickerView":"widgets/DatePicker/js/datePickerView","uwr/defaultButton":"widgets/DefaultButton/js/defaultButton","uwr/highchartsUbsTheme":"widgets/Chart/js/highchartsUbsTheme","uwr/input":"widgets/Input/js/input","uwr/inputView":"widgets/Input/js/inputView","uwr/inputMessageUtil":"widgets/Input/js/inputMessageUtil","uwr/inputFormattingUtil":"widgets/Input/js/inputFormattingUtil","uwr/localNavigation":"widgets/LocalNavigation/js/localNavigation","uwr/localNavigationItems":"widgets/LocalNavigation/js/localNavigationItems","uwr/localNavigationView":"widgets/LocalNavigation/js/localNavigationView","uwr/messageBox":"widgets/MessageBox/js/messageBox","uwr/modalDialog":"widgets/ModalDialog/js/modalDialog","uwr/overlay":"widgets/Overlay/js/overlay","uwr/segmentedControl":"widgets/SegmentedControl/js/segmentedControl","uwr/shifterBox":"widgets/ShifterBox/js/shifterBox","uwr/shifterBoxView":"widgets/ShifterBox/js/shifterBoxView","uwr/singleCheckbox":"widgets/SingleCheckbox/js/singleCheckbox","uwr/slider":"widgets/Slider/js/slider","uwr/sliderView":"widgets/Slider/js/sliderView","uwr/tile":"widgets/Tile/js/tile","uwr/timer":"widgets/Timer/js/timer","uwr/tooltip":"widgets/Tooltip/js/tooltip","uwr/worldMap":"widgets/WorldMap/js/worldMap"}};
+b=uwr.util.merge({},c,d);
+require.config(b);
+f={context:d.context};
+uwr.util.assign("uwr.config.require",f);
+})();
+uwr.util.shortcut({module:"uwr/advancedDropdown",namespace:"uwr.advanceddropdown",apiFunctions:["init","setValue","ready","enable","disable","reset"]});
+uwr.util.registerWidgetType({cssClass:"uwr-advanced-dropdown",namespace:"uwr.advanceddropdown"});
+uwr.util.shortcut({module:"uwr/datePicker",namespace:"uwr.datepicker",apiFunctions:["init"]});
+uwr.util.registerWidgetType({cssClass:"uwr-date-picker",namespace:"uwr.datepicker"});
+uwr.util.shortcut({module:"uwr/defaultButton",namespace:"uwr.defaultbutton",apiFunctions:["init"]});
+uwr.util.registerWidgetType({cssClass:"uwr-default-button",namespace:"uwr.defaultbutton"});
+uwr.util.shortcut({module:"uwr/dropdown",namespace:"uwr.dropdown",apiFunctions:["init"]});
+uwr.util.registerWidgetType({cssClass:"uwr-dropdown",namespace:"uwr.dropdown"});
+uwr.util.shortcut({module:"uwr/input",namespace:"uwr.input",apiFunctions:["init","message"]});
+uwr.util.registerWidgetType({cssClass:"uwr-input",namespace:"uwr.input"});
+uwr.util.shortcut({module:"uwr/localNavigation",namespace:"uwr.localnav",apiFunctions:["deselect","disable","enable","hide","init","select","show"]});
+uwr.util.registerWidgetType({cssClass:"uwr-local-nav",namespace:"uwr.localnav"});
+uwr.util.shortcut({module:"uwr/messageBox",namespace:"uwr.messagebox",apiFunctions:["init"]});
+uwr.util.registerWidgetType({cssClass:"uwr-message-box",namespace:"uwr.messagebox"});
+uwr.util.shortcut({module:"uwr/modalDialog",namespace:"uwr.modaldialog",apiFunctions:["init","open","close","invoke","prepare"]});
+uwr.util.registerWidgetType({cssClass:"uwr-modal-dialog",namespace:"uwr.modaldialog"});
+var WidgetList=function(c){var a=[],d,b;
+function e(f){return function(){var g;
+for(g=0;
+g<a.length;
+g++){a[g][f](arguments);
+}};
+}this.length=function(){return a.length;
+};
+this.get=function(f){return a[f];
+};
+this.push=function(f){if(f){a.push(f);
+}};
+for(d=0;
+d<c.length;
+d++){b=c[d];
+this[b]=e(b);
+}};
+require(uwr.config.require,["uwr/jquery"],function(a){var b=["init","hide","show"];
+uwr.util.assign("uwr.overlay",function(c){var d=a(".uwr-overlay"+(c||"")),e=new WidgetList(b),f;
+d.each(function(){f=a(this).data("uwrWidget");
+e.push(f);
+});
+return e;
+});
+uwr.util.shortcut({module:"uwr/overlay",namespace:"uwr.overlay",apiFunctions:b});
+uwr.util.registerWidgetType({cssClass:"uwr-overlay",namespace:"uwr.overlay"});
+});
+uwr.util.shortcut({module:"uwr/segmentedControl",namespace:"uwr.segmentedcontrol",apiFunctions:["init","toggle"]});
+uwr.util.registerWidgetType({cssClass:"uwr-segmented-control",namespace:"uwr.segmentedcontrol"});
+uwr.util.shortcut({module:"uwr/shifterBox",namespace:"uwr.shifterbox",apiFunctions:["init","getState"]});
+uwr.util.registerWidgetType({cssClass:"uwr-shifter-box",namespace:"uwr.shifterbox"});
+uwr.util.shortcut({module:"uwr/singleCheckbox",namespace:"uwr.singlecheckbox",apiFunctions:["init","setChecked","setType","toggle"]});
+uwr.util.registerWidgetType({cssClass:"uwr-single-checkbox",namespace:"uwr.singlecheckbox"});
+uwr.util.shortcut({module:"uwr/slider",namespace:"uwr.slider",apiFunctions:["init"]});
+uwr.util.registerWidgetType({cssClass:"uwr-slider",namespace:"uwr.slider"});
+uwr.util.shortcut({module:"uwr/tile",namespace:"uwr.tile",apiFunctions:["init"]});
+uwr.util.registerWidgetType({cssClass:"uwr-tile",namespace:"uwr.tile"});
+uwr.util.shortcut({module:"uwr/timer",namespace:"uwr.timer",apiFunctions:["init","start","cancel","ready"]});
+uwr.util.registerWidgetType({cssClass:"uwr-timer",namespace:"uwr.timer"});
+uwr.util.shortcut({module:"uwr/tooltip",namespace:"uwr.tooltip",apiFunctions:["init","enable","disable"]});
+uwr.util.registerWidgetType({cssClass:"uwr-tooltip",namespace:"uwr.tooltip"});
+(function(){function a(){uwr.init();
+}if(uwr.modaldialog&&!uwr.util.retrieve("uwr._runtime.modalDialog.prepared")){uwr.modaldialog.prepare(a);
+uwr.util.assign("uwr._runtime.modalDialog.prepared",true);
+}else{a();
+}})();
+if(uwr.config("jquery")==="public"){window.$=$uwr;
+window.jQuery=$uwr;
+}Á°ƒ¾‹ô      fyôffyôfGçÏfyù       O^userContextId=3&partitionKey=%28https%2Cubs.com%29,:https://ebanking-ch2.ubs.com/login/resources/nevislogrend/applications/web_ch/webdata/ubswidgets/uwr.js strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Mon, 24 Jun 2024 22:34:08 GMT
+Server: Apache
+Content-Type: application/javascript
+X-Frame-Options: sameorigin
+X-XSS-Protection: 1; mode=block
+Content-Length: 10714
+Cache-Control: private,max-age=1200,s-maxage=1200
+Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
+X-Content-Type-Options: nosniff
+Feature-Policy: camera 'self'; microphone 'self'
+stidId: cIsvukhPLAIaNqOZ
+trID: 1f0a8d18-0fe24b-d90a4c4a-1904c6297ec-0085ed4c
+Expires: Tue, 01 Jan 2030 00:00:00 GMT
+Strict-Transport-Security: max-age=31536000
+ original-response-headers Date: Mon, 24 Jun 2024 22:34:08 GMT
+Server: Apache
+Content-Type: application/javascript
+X-Frame-Options: sameorigin
+X-XSS-Protection: 1; mode=block
+Content-Length: 10714
+Cache-Control: private,max-age=1200,s-maxage=1200
+Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
+X-Content-Type-Options: nosniff
+Feature-Policy: camera 'self'; microphone 'self'
+stidId: cIsvukhPLAIaNqOZ
+trID: 1f0a8d18-0fe24b-d90a4c4a-1904c6297ec-0085ed4c
+Expires: Tue, 01 Jan 2030 00:00:00 GMT
+Strict-Transport-Security: max-age=31536000
+Keep-Alive: timeout=5, max=6
+Connection: Keep-Alive
+ ctid 2 uncompressed-len 0 net-response-time-onstart 125 net-response-time-onstop 126   )Ú

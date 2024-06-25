@@ -1,0 +1,509 @@
+define(['uwr/jquery', 'uwr/initState'], function ($, initState) {
+
+    /**
+     * Instances of the Observer class can be observed by other objects. The observed object can raise its own
+     * events and observer objects can attach event handlers to the observed object. Triggering an event by
+     * the observed object means the execution of all event handlers attached to that particular event.
+     *
+     * Event names are strings. Event handlers are functions with one argument, the data sent by the observed object.
+     * Within event handlers the 'this' is mapped to the observed object.
+     */
+    function Observable() {
+        var handlers = {};
+
+        this.on = function (name, func) {
+            if (!handlers[name]) {
+                handlers[name] = [];
+            }
+            handlers[name].push(func);
+        };
+
+        this.trigger = function (name, data) {
+            if (handlers[name] && handlers[name].length > 0) {
+                for (var i = 0, l = handlers[name].length; i < l; i++) {
+                    handlers[name][i].call(null, data);
+                }
+            }
+        };
+
+        this.off = function (name, func) {
+            var l = arguments.length;
+            if (l === 0) {
+                handlers = {};
+            } else if (l === 1 && handlers[name]) {
+                delete handlers[name];
+            } else if (l === 2 && handlers[name] && handlers[name].length > 0) {
+                for (var i = 0, k = handlers[name].length; i < k; i++) {
+                    if (handlers[name][i] === func) {
+                        delete handlers[name][i];
+                        return;
+                    }
+                }
+            }
+        };
+    }
+
+    /**
+     * A class which is a wrapper of a single value. It extends the Observable class, so it throws a 'change:value'
+     * event on value changed.
+     *
+     * @param val The initial value of this class.
+     * @param changeCallback The callback method which is invoked on value change. This can define additional effect
+     * associated to the change event.
+     */
+    function ObservableValue(val, changeCallback) {
+        var self = this;
+
+        this.value = function () {
+            if (arguments.length) {
+                var newVal = arguments[0];
+                if (newVal !== val) {
+                    val = newVal;
+                    self.trigger('change:value', val);
+                    if (typeof changeCallback === 'function') {
+                        invoke(changeCallback, val);
+                    }
+                }
+            } else {
+                return val;
+            }
+        };
+
+        Observable.call(this);
+    }
+
+    function callWidgetTypeInit(selector, namespace, callback) {
+        if ($(selector).length > 0) {
+            namespace.init(callback);
+        } else {
+            callback();
+        }
+    }
+
+    /**
+     * Returns the object associated to the given fully qualified name in the window object, e.g. 'document.cookie'.
+     * If not found, unassigned will return.
+     */
+    function getObjectByName(name) {
+        var i,
+            obj = window,
+            parts = name.split('.'),
+            len = parts.length;
+        for (i = 0; i < len; i++) {
+            obj = obj[parts[i]];
+            if (obj === undefined) {
+                break;
+            }
+        }
+        return obj;
+    }
+
+    /**
+     * This function is to be used to register a given widget type: it adds the widget type to the
+     * global initialization state, but only if the widget has an init() function defined.
+     *
+     * @param cssClass The main CSS class associated with the widget.
+     * @param namespace The widget type's API functions' namespace string.
+     */
+    function registerWidgetType(cssClass, namespace) {
+        var namespaceObj = getObjectByName(namespace);
+        if (typeof namespaceObj.init === 'function') {
+            initState.addInitializableWidgetType({
+                selector: '.' + cssClass,
+                namespace: namespaceObj
+            });
+        }
+    }
+
+    /**
+     * Initialize all widget types, already registered by registerWidgetType.
+     *
+     * @param callback A function which is called after all widget types have been initialized.
+     */
+    function initAllWidgetTypes(callback) {
+        $(function () {
+            var widgetTypes = initState.getInitializableWidgetTypes(),
+                count = widgetTypes.length,
+                i;
+
+            initState.initialized = false;
+
+            if (typeof callback === 'function') {
+                initState.addReadyHandler(callback);
+            }
+
+            for (i = 0; i < widgetTypes.length; i++) {
+                /* jshint loopfunc:true */
+                callWidgetTypeInit(widgetTypes[i].selector, widgetTypes[i].namespace, function () {
+                    count--;
+                    if (count === 0) {
+                        initState.ready();
+                    }
+                });
+                /* jshint loopfunc:false */
+            }
+        });
+    }
+
+    /**
+     * Invokes a function passed in as the first argument. If there are more arguments passed in, they will be used
+     * as parameters for the function being invoked.
+     * If the first parameter is not a function, then nothing will be done.
+     *
+     * @param First param is the function to invoke, any further params will be passed in to that function.
+     *     If the first parameter is not a function, then nothing will be done.
+     */
+    function invoke(fn) {
+        var args = [],
+            i;
+
+        if (typeof fn === 'function') {
+            if (arguments.length > 1) {
+                for (i = 1; i < arguments.length; i++) {
+                    args.push(arguments[i]);
+                }
+            }
+            fn.apply(null, args);
+        }
+    }
+
+    function buildClass() {
+        /* jshint ignore:start */
+        /*
+         * Simple JavaScript Inheritance
+         * By John Resig http://ejohn.org/
+         * http://ejohn.org/blog/simple-javascript-inheritance/
+         * MIT Licensed.
+         *
+         * For use in UW4 the constructor method's name became _init() instead of the original init().
+         */
+
+        var initializing = false,
+        fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/,
+
+        // The base Class implementation (does nothing)
+        Class = function() {};
+
+        // Create a new Class that inherits from this class
+        Class.extend = function(prop) {
+            var _super = this.prototype;
+
+            // Instantiate a base class (but only create the instance,
+            // don't run the init constructor)
+            initializing = true;
+            var prototype = new this();
+            initializing = false;
+
+            // Copy the properties over onto the new prototype
+            for (var name in prop) {
+                // Check if we're overwriting an existing function
+                prototype[name] = typeof prop[name] == 'function' &&
+                    typeof _super[name] == 'function' && fnTest.test(prop[name])
+                        ? (function(name, fn) {
+                            return function() {
+                                var tmp = this._super;
+
+                                // Add a new ._super() method that is the same method
+                                // but on the super-class
+                                this._super = _super[name];
+
+                                // The method only need to be bound temporarily, so we
+                                // remove it when we're done executing
+                                var ret = fn.apply(this, arguments);
+                                this._super = tmp;
+
+                                return ret;
+                            };
+                        })(name, prop[name])
+                        : prop[name];
+            }
+
+            // The dummy class constructor
+            function Class() {
+                // All construction is actually done in the init method
+                if ( !initializing && this._init) {
+                    this._init.apply(this, arguments);
+                }
+            }
+
+            // Populate our constructed prototype object
+            Class.prototype = prototype;
+
+            // Enforce the constructor to be what we expect
+            Class.prototype.constructor = Class;
+
+            // And make this class extendable
+            Class.extend = arguments.callee;
+
+            return Class;
+        };
+
+        return Class;
+        /* jshint ignore:end */
+    }
+
+    function isString(value) {
+        return $.type(value) === 'string';
+    }
+
+    function stringToObject(str) {
+        if (isString(str)) {
+            str = JSON.parse(str);
+        }
+        return str;
+    }
+
+    function objectToString(obj) {
+        if (isString(obj)) {
+            return obj;
+        }
+        if ($.isPlainObject(obj)) {
+            return JSON.stringify(obj);
+        }
+        return '' + obj;
+    }
+
+    function isTouchExplorer() {
+        return (navigator.userAgent.indexOf('MSIE') > -1 || navigator.userAgent.indexOf('rv:11.0') > -1)
+                && navigator.userAgent.indexOf('Touch') > -1;
+    }
+
+    /**
+     * This function checks if we are on a touch device (usually a tablet or a smart phone)
+     */
+    function isTouchDevice() {
+        return isTouchExplorer() ? true : !!('ontouchstart' in window);
+    }
+
+    function isIe7() {
+        return isIeVersion(7);
+    }
+
+    function isIe8() {
+        return isIeVersion(8);
+    }
+
+    function isIe9() {
+        return isIeVersion(9);
+    }
+
+    function isIeVersion(version) {
+        return navigator.userAgent.indexOf('MSIE ' + version) > -1;
+    }
+
+    /**
+     * @param {string} A JS reference string.
+     * @return The reference string cleaned up. No javascript calls, functions and statements are allowed
+     *         in this reference - not allowed characters are removed.
+     */
+    function sanitizeReferenceString(reference) {
+        return reference.replace(/[^\w\.\[\]\'\"-]/g, '');
+    }
+
+    /**
+     * @param {string} A JS expression string.
+     * @return The reference of JS expression string.
+     */
+    function resolveReference(str) {
+        var reference;
+        if (str) {
+            reference = eval(common.sanitizeReferenceString(str)); // jshint ignore:line
+        }
+        return reference;
+    }
+
+    /**
+     * The missing signum function of Math. Value should be a number.
+     */
+    function sign(value) {
+        return value > 0 ? 1 : value < 0 ? -1 : 0;
+    }
+
+    /**
+     * Get data attribute of the elem and format it.
+     *
+     * @param $elem The jQuery elem which data is retrieved.
+     * @param name The name of the data attribute.
+     * @param defaultValue The default value if no data attribute found.
+     * @param formatter Optional, to format value.
+     * @return The value of the data attribute or the defaultValue if no data attribute found.
+     */
+    function data($elem, name, defaultValue, formatter) {
+        var elemData = $elem.data(name),
+            value = elemData !== undefined ? elemData : defaultValue;
+        return formatter ? formatter(value) : value;
+    }
+
+    /**
+     * Get data attribute of the elem as integer.
+     *
+     * @param $elem The jQuery elem which data is retrieved.
+     * @param name The name of the data attribute.
+     * @param defaultValue The default value if no data attribute found.
+     * @return The integer value of the data attribute or the defaultValue if no data attribute found.
+     */
+    function intData($elem, name, defaultValue) {
+        return data($elem, name, defaultValue, parseInt);
+    }
+
+    /**
+     * Get data attribute of the elem as JSON object.
+     *
+     * @param $elem The jQuery elem of which data is retrieved.
+     * @param name The name of the data attribute.
+     * @param defaultValue The default value if no data attribute found or the data is not valid JSON.
+     *        It can be of any type.
+     * @return The JSON object of the data attribute or the given defaultValue if no data attribute found
+     *         or the data is not valid JSON.
+     */
+    function jsonData($elem, name, defaultValue) {
+        return data($elem, name, defaultValue, function (val) {
+            var json;
+            try {
+                json = stringToObject(val);
+            } catch (e) {}
+            if (!json) {
+                json = defaultValue;
+            }
+            return json;
+        });
+    }
+
+    /**
+     * Get the configuration from the HTML element attribute.
+     *
+     * @param $elem The jQuery elem of which attribute content is retrived.
+     * @param attributeName The name of the data attribute (without the data- prefix).
+     * @param args The optional arguments array of the configuration provider function.
+     * @return The JSON configuration object which is provided based on the attribute's value.
+     */
+    function resolveConfig($elem, attributeName, args) {
+        var obj = jsonData($elem, attributeName, $elem.data(attributeName)),
+            config = {},
+            referencedObj;
+
+        if (obj) {
+            if ($.isPlainObject(obj)) {
+                config = obj;
+            } else {
+                referencedObj = resolveReference(String(obj));
+                if ($.isFunction(referencedObj)) {
+                    config = referencedObj.apply(undefined, args || []);
+                } else {
+                    // Clone so that we don't modify the client's config object
+                    config = $.extend(true, {}, referencedObj);
+                }
+            }
+        }
+
+        return config;
+    }
+
+    /**
+     * @return The event object regardless of browser type
+     */
+    function fixEvent(event) {
+        return event || window.event;
+    }
+
+    /**
+     * Fire an event on a defined HTML element using the browser's infrastructure.
+     * @param eventType The type of the event like change or click.
+     * @param element The HTML element which is the target of the event.
+     */
+    function dispatchEvent(eventType, element) {
+        var event;
+        if (typeof Event === 'function') { //latest API
+            event = new Event(eventType);
+        } else if (document.createEvent) { //modern IE
+            event = document.createEvent('Event');
+            event.initEvent(eventType, false, false);
+        } else { //IE fallback
+            event = document.createEventObject();
+            event.eventType = eventType;
+        }
+
+        event.eventName = eventType;
+
+        if (element.dispatchEvent) {
+            element.dispatchEvent(event);
+        } else { // before IE9
+            element.fireEvent('on' + eventType, event);
+        }
+
+    }
+
+    /**
+     * @return The event's target in jQuery object regardless of browser type
+     * (IE8 doesn't pass the instance of the 'event' object to the handler,
+     *  this must be taken from the global 'window' object)
+     */
+    function getEventTarget(event) {
+        var ev = fixEvent(event);
+        return $(ev.target || ev.srcElement);
+    }
+
+    var common = {
+        /**
+         * The Class object as described in the 'Simple JavaScript Inheritance' page.
+         * Only difference is that the user defined class's constructor should be _init()
+         * and not init() as the page suggests.
+         */
+        Class: buildClass(),
+        Observable: Observable,
+        ObservableValue: ObservableValue,
+        registerWidgetType: registerWidgetType,
+        dispatchEvent: dispatchEvent,
+        initAllWidgetTypes: initAllWidgetTypes,
+        invoke: invoke,
+        isString: isString,
+        isTouchDevice: isTouchDevice,
+        isIe7: isIe7,
+        isIe8: isIe8,
+        isIe9: isIe9,
+        sanitizeReferenceString: sanitizeReferenceString,
+        resolveReference: resolveReference,
+        resolveConfig: resolveConfig,
+        sign: sign,
+        stringToObject: stringToObject,
+        objectToString: objectToString,
+        data: data,
+        intData: intData,
+        jsonData: jsonData,
+        fixEvent: fixEvent,
+        getEventTarget: getEventTarget
+    };
+
+    return common;
+});È=<gÕ      fyôgfyôgGçÐfyù   ¯    O^userContextId=3&partitionKey=%28https%2Cubs.com%29,:https://ebanking-ch2.ubs.com/login/resources/nevislogrend/applications/web_ch/webdata/ubswidgets/shared/modules/common.js strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAAAAgAAAAAAAAAAAAAAAAAAAAEAOQFmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAc/MIIHOzCCBiOgAwIBAgIQDaS9rvKLMWdYT18p9MzzJDANBgkqhkiG9w0BAQsFADBEMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMR4wHAYDVQQDExVEaWdpQ2VydCBFViBSU0EgQ0EgRzIwHhcNMjMxMjE5MDAwMDAwWhcNMjUwMTE4MjM1OTU5WjCBtTETMBEGCysGAQQBgjc8AgEDEwJDSDEYMBYGCysGAQQBgjc8AgECDAdaw7xyaWNoMR0wGwYDVQQPDBRQcml2YXRlIE9yZ2FuaXphdGlvbjEYMBYGA1UEBRMPQ0hFLTEwMS4zMjkuNTYxMQswCQYDVQQGEwJDSDEPMA0GA1UEBxMGWnVyaWNoMQ8wDQYDVQQKEwZVQlMgQUcxHDAaBgNVBAMTE2ViYW5raW5nLWNoLnVicy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQChmqPeNTWECd3aercwN1VrPGu2M1+fPbta8oJlRdJhzRPIlfvCNWb55i0d9kMVDTe2FBp6xK721XuppzIlTiCLCaoMG5iENxWznjxRh00mIbDv2L8+uQBHnGIFX5+tDmxeX6K9tpqqGe6gkcVjxcs8Bd5LfCcp+IxktOBoj3hmlOycv70iw91LNGXKa/V9qB3yTKp8ZJl81d4bk0vmIulFh/JrAtaEL+XrdgHw/8nf1w/GHUhb57ChvE0dJumGMjH99CwTfUt0ANPl2/d03OkIP/lGDbDFfsUqSFpaVsLlC1n//3NbsnsHtIiPNTV+mej4chacSYgZtfBkEhYl43DjAgMBAAGjggO1MIIDsTAfBgNVHSMEGDAWgBRqTlC/mGidW3sgddRZAXlIZpIyBjAdBgNVHQ4EFgQUCw24ovIo2sf/E7YQ++C/QdlIZ8gwdgYDVR0RBG8wbYITZWJhbmtpbmctY2gudWJzLmNvbYIUZWJhbmtpbmctY2gxLnVicy5jb22CFGViYW5raW5nLWNoMi51YnMuY29tghRlYmFua2luZy1jaDMudWJzLmNvbYIUZWJhbmtpbmctY2g0LnVicy5jb20wSgYDVR0gBEMwQTALBglghkgBhv1sAgEwMgYFZ4EMAQEwKTAnBggrBgEFBQcCARYbaHR0cDovL3d3dy5kaWdpY2VydC5jb20vQ1BTMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwdQYDVR0fBG4wbDA0oDKgMIYuaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0RVZSU0FDQUcyLmNybDA0oDKgMIYuaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0RVZSU0FDQUcyLmNybDBzBggrBgEFBQcBAQRnMGUwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTA9BggrBgEFBQcwAoYxaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0RVZSU0FDQUcyLmNydDAMBgNVHRMBAf8EAjAAMIIBgAYKKwYBBAHWeQIEAgSCAXAEggFsAWoAdwDPEVbu1S58r/OHW9lpLpvpGnFnSrAX7KwB0lt3zsw7CAAAAYyCyKaCAAAEAwBIMEYCIQCg6O3fc9Xh6xXg104w5m1QDIHprCAeeDQRm1Ryr0HiGwIhALliYwo0V7gtNFNsTuuN8+xXry+AfFarwGOkrw+lim8EAHYAPxdLT9ciR1iUHWUchL4NEu2QN38fhWrrwb8ohez4ZG4AAAGMgsimVwAABAMARzBFAiA0ZzICsT1tioLxg82vFeL1yr7z1bHI9B5Vjww6pIpddQIhAKljZiCzIyuakbjMEgiZ68yHndz6e+cG69GdofjGRAv6AHcAfVkeEuF4KnscYWd8Xv340IdcFKBOlZ65Ay/ZDowuebgAAAGMgsimQQAABAMASDBGAiEApW0MwS1DD8+JY5jt+LVkG5wEInGBAOXhg5zkBzHn1w8CIQDfTI5T+2yt4AxhoPhO+OBqeEOX/3RpqCijkEMK0OE4eTANBgkqhkiG9w0BAQsFAAOCAQEABr4pz6wLJC+ksuk3MoIIeYwdM7vJ3LWu+KWL+dH2PsZmNMDxDkHgeFdacE4bvU6FKDirAh66nGTVeZz1y+Vqw2MzQEqPZm6Eu7VkXVXtMkA2GkFyJi3Xwv4OlRK/CKzILFW9pvMixZ6SljjuvmzPzDyj2ef8FNBANMQbQELDSu+N75xD3Xxc1c65LLvR4FqqnyMrRZtwUTW/0NQjvo1si8z+pztCAuBxBWHlzHrSOJgIG7JE5iOBkXOikmjV2uuT94ZEFonXDYmkgtUpbT081ptUgbCCqSUqKBTAW98QxaI829TDL+bB70BuQOuJB3J9k7Cw7/m2YmyIcIlFeJJ5wcAwAAMAAAAAAQEBAAAAAAAABngyNTUxOQAAABBSU0EtUEtDUzEtU0hBNTEyAANmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAc/MIIHOzCCBiOgAwIBAgIQDaS9rvKLMWdYT18p9MzzJDANBgkqhkiG9w0BAQsFADBEMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMR4wHAYDVQQDExVEaWdpQ2VydCBFViBSU0EgQ0EgRzIwHhcNMjMxMjE5MDAwMDAwWhcNMjUwMTE4MjM1OTU5WjCBtTETMBEGCysGAQQBgjc8AgEDEwJDSDEYMBYGCysGAQQBgjc8AgECDAdaw7xyaWNoMR0wGwYDVQQPDBRQcml2YXRlIE9yZ2FuaXphdGlvbjEYMBYGA1UEBRMPQ0hFLTEwMS4zMjkuNTYxMQswCQYDVQQGEwJDSDEPMA0GA1UEBxMGWnVyaWNoMQ8wDQYDVQQKEwZVQlMgQUcxHDAaBgNVBAMTE2ViYW5raW5nLWNoLnVicy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQChmqPeNTWECd3aercwN1VrPGu2M1+fPbta8oJlRdJhzRPIlfvCNWb55i0d9kMVDTe2FBp6xK721XuppzIlTiCLCaoMG5iENxWznjxRh00mIbDv2L8+uQBHnGIFX5+tDmxeX6K9tpqqGe6gkcVjxcs8Bd5LfCcp+IxktOBoj3hmlOycv70iw91LNGXKa/V9qB3yTKp8ZJl81d4bk0vmIulFh/JrAtaEL+XrdgHw/8nf1w/GHUhb57ChvE0dJumGMjH99CwTfUt0ANPl2/d03OkIP/lGDbDFfsUqSFpaVsLlC1n//3NbsnsHtIiPNTV+mej4chacSYgZtfBkEhYl43DjAgMBAAGjggO1MIIDsTAfBgNVHSMEGDAWgBRqTlC/mGidW3sgddRZAXlIZpIyBjAdBgNVHQ4EFgQUCw24ovIo2sf/E7YQ++C/QdlIZ8gwdgYDVR0RBG8wbYITZWJhbmtpbmctY2gudWJzLmNvbYIUZWJhbmtpbmctY2gxLnVicy5jb22CFGViYW5raW5nLWNoMi51YnMuY29tghRlYmFua2luZy1jaDMudWJzLmNvbYIUZWJhbmtpbmctY2g0LnVicy5jb20wSgYDVR0gBEMwQTALBglghkgBhv1sAgEwMgYFZ4EMAQEwKTAnBggrBgEFBQcCARYbaHR0cDovL3d3dy5kaWdpY2VydC5jb20vQ1BTMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwdQYDVR0fBG4wbDA0oDKgMIYuaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0RVZSU0FDQUcyLmNybDA0oDKgMIYuaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0RVZSU0FDQUcyLmNybDBzBggrBgEFBQcBAQRnMGUwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTA9BggrBgEFBQcwAoYxaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0RVZSU0FDQUcyLmNydDAMBgNVHRMBAf8EAjAAMIIBgAYKKwYBBAHWeQIEAgSCAXAEggFsAWoAdwDPEVbu1S58r/OHW9lpLpvpGnFnSrAX7KwB0lt3zsw7CAAAAYyCyKaCAAAEAwBIMEYCIQCg6O3fc9Xh6xXg104w5m1QDIHprCAeeDQRm1Ryr0HiGwIhALliYwo0V7gtNFNsTuuN8+xXry+AfFarwGOkrw+lim8EAHYAPxdLT9ciR1iUHWUchL4NEu2QN38fhWrrwb8ohez4ZG4AAAGMgsimVwAABAMARzBFAiA0ZzICsT1tioLxg82vFeL1yr7z1bHI9B5Vjww6pIpddQIhAKljZiCzIyuakbjMEgiZ68yHndz6e+cG69GdofjGRAv6AHcAfVkeEuF4KnscYWd8Xv340IdcFKBOlZ65Ay/ZDowuebgAAAGMgsimQQAABAMASDBGAiEApW0MwS1DD8+JY5jt+LVkG5wEInGBAOXhg5zkBzHn1w8CIQDfTI5T+2yt4AxhoPhO+OBqeEOX/3RpqCijkEMK0OE4eTANBgkqhkiG9w0BAQsFAAOCAQEABr4pz6wLJC+ksuk3MoIIeYwdM7vJ3LWu+KWL+dH2PsZmNMDxDkHgeFdacE4bvU6FKDirAh66nGTVeZz1y+Vqw2MzQEqPZm6Eu7VkXVXtMkA2GkFyJi3Xwv4OlRK/CKzILFW9pvMixZ6SljjuvmzPzDyj2ef8FNBANMQbQELDSu+N75xD3Xxc1c65LLvR4FqqnyMrRZtwUTW/0NQjvo1si8z+pztCAuBxBWHlzHrSOJgIG7JE5iOBkXOikmjV2uuT94ZEFonXDYmkgtUpbT081ptUgbCCqSUqKBTAW98QxaI829TDL+bB70BuQOuJB3J9k7Cw7/m2YmyIcIlFeJJ5wWYKMiaRXE/7uyCJhaYy3wW9w5eaVCJM1YWJaWtuluqDAAAAAAAABUAwggU8MIIEJKADAgECAhABZ48f74giVdiwpw5re7IgMA0GCSqGSIb3DQEBCwUAMGExCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEcyMB4XDTIwMDcwMjEyNDI1MFoXDTMwMDcwMjEyNDI1MFowRDELMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEeMBwGA1UEAxMVRGlnaUNlcnQgRVYgUlNBIENBIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArR5mzH+d5Ot/gxcnPRHZ8lMgN83wDBQC7uHLiAjS+ns7wsAAfHaHdtt/zCX6kYxLFokr198MMIPrcWqoUGoT15OajdGSBCGW7nlrTguxdEtwrpyuQE47R2N2ifJuaGt8au0Gpi9tFq3F6eS/RKDh+uFGXjBiHh2dbQs5VEaFu3UblDX3Ob0KoyWrsuVR0AT7p3drn76ml8ZydYuZsRURwsc8CduX7+Ipq5ClCVTUyL7AQGeMTm0rxDvvydpecX4Ox51Ans0SL5tCiidMcTP2vJ4RxQe5BO/ucClr/MKp6zmVefWkyzgtkndJWBuRMuP5FsGi/+6LBNe2QERZrC9kfwIDAQABo4ICCzCCAgcwHQYDVR0OBBYEFGpOUL+YaJ1beyB11FkBeUhmkjIGMB8GA1UdIwQYMBaAFE4iVCAYlebjbuYP+vq5Eu0GF485MA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwEgYDVR0TAQH/BAgwBgEB/wIBADA0BggrBgEFBQcBAQQoMCYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTB7BgNVHR8EdDByMDegNaAzhjFodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vRGlnaUNlcnRHbG9iYWxSb290RzIuY3JsMDegNaAzhjFodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRHbG9iYWxSb290RzIuY3JsMIHOBgNVHSAEgcYwgcMwgcAGBFUdIAAwgbcwKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwgYoGCCsGAQUFBwICMH4MfEFueSB1c2Ugb2YgdGhpcyBDZXJ0aWZpY2F0ZSBjb25zdGl0dXRlcyBhY2NlcHRhbmNlIG9mIHRoZSBSZWx5aW5nIFBhcnR5IEFncmVlbWVudCBsb2NhdGVkIGF0IGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9ycGEtdWEwDQYJKoZIhvcNAQELBQADggEBAFIyCsJ1jb472ymdg2/AeIb72UIlvIQtHRSygvCnMalJ2QcPulUMMUmbf/8HwSz7XtPWjkdq34dEOy9Gvt3cwTKj2JeSTEuEoSACkDYW3Z5l8+tOiVz3k/BJaefcVnwGF0Y7hutMDj7OQ9IqgxeL9f5YsE03b1n+dsJLsf+osa3uBWIS9Mh1TzH4fiX9eKBkxQNpWYn4Hl3tzBIrvI6hB1+ggEaYDkynguEzOjnat//+Rc98TfBghlUepW7HGWdOQViZ98Jf38uiftJZoZ2DpFyThEeEcta2bPaVNnkISjaWMOwbMIUYk/uhPirpDygULfyKu90ogn3lxTFjOPi2c4hmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAOSMIIDjjCCAnagAwIBAgIQAzrx5qcRqaC7KGSxHQn65TANBgkqhkiG9w0BAQsFADBhMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBHMjAeFw0xMzA4MDExMjAwMDBaFw0zODAxMTUxMjAwMDBaMGExCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzfNNNx7a8myaJCtSnX/RrohCgiN9RlUyfuI2/Ou8jqJkTx65qsGGmvPrC3oXgkkRLpimn7Wo6h+4FR1IAWsULecYxpsMNzaHxmx1x7e/dfgy5SDN67sH0NO3Xss0r0upS/kqbitOtSZpLYl6ZtrAGCSYP9PIUkY92eQq2EGnI/yuum06ZIya7XzV+hdG82MHauVBJVJ8zUtluNJbd134/tJS7SsVQepj5WztCO7TG1F8PapspUwtP1MVYwnSlcUfIKdzXOS0xZKBgyMUNGPHgm+F6HmIcr9g+UQvIOlCsRnKPZzFBQ9RnbDhxSJITRNrw9FDKZJobq7nMWxM4MphQIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNVHQ4EFgQUTiJUIBiV5uNu5g/6+rkS7QYXjzkwDQYJKoZIhvcNAQELBQADggEBAGBnKJRvDkhj6zHd6mcY1Yl9PMWLSn/pvtsrF9+wX3N3KjITOYFnQoQj8kVnNeyIv/iPsGEMNKSuIEyExtv4NeF22d+mQrvHRAiGfzZ0JFrabA0UWTW98kndth/Jsw1HKj2ZL7tcu7XUIOGZX1NGFdtom/DzMNU+MeKNhJ7jitralj41E6Vf8PlwUHBHQRFXGU7Aj64GxJUTFy8bJZ918rGOmaFvE7FBcf6IKshPECBV1/MUReXgRPTqh5Uykw7+U0b6LJ3/iyK5S9kJRaTepLiaWN0bfVKfjllDiIGknibVb63dDcY3fe0Dkhvld1927jyNxF1WW6LZZm6zNTflMrYAAAABAAAACGh0dHAvMS4xAAEAAAAAXnRsc2ZsYWdzMHgwMDAwMDAwMDplYmFua2luZy1jaDIudWJzLmNvbTo0NDNedXNlckNvbnRleHRJZD0zJnBhcnRpdGlvbktleT0lMjhodHRwcyUyQ3Vicy5jb20lMjkAAA== request-method GET response-head HTTP/1.1 200 OK
+Date: Mon, 24 Jun 2024 22:34:09 GMT
+Server: Apache
+Content-Type: application/javascript
+X-Frame-Options: sameorigin
+X-XSS-Protection: 1; mode=block
+Content-Length: 16197
+Cache-Control: private,max-age=1200,s-maxage=1200
+Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
+X-Content-Type-Options: nosniff
+Feature-Policy: camera 'self'; microphone 'self'
+stidId: yIuAukhPLAIaNqOZ
+trID: 1f0a8d18-0fe24b-d90a4c4a-1904c629bae-0085ed62
+Expires: Tue, 01 Jan 2030 00:00:00 GMT
+Strict-Transport-Security: max-age=31536000
+ original-response-headers Date: Mon, 24 Jun 2024 22:34:09 GMT
+Server: Apache
+Content-Type: application/javascript
+X-Frame-Options: sameorigin
+X-XSS-Protection: 1; mode=block
+Content-Length: 16197
+Cache-Control: private,max-age=1200,s-maxage=1200
+Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
+X-Content-Type-Options: nosniff
+Feature-Policy: camera 'self'; microphone 'self'
+stidId: yIuAukhPLAIaNqOZ
+trID: 1f0a8d18-0fe24b-d90a4c4a-1904c629bae-0085ed62
+Expires: Tue, 01 Jan 2030 00:00:00 GMT
+Strict-Transport-Security: max-age=31536000
+Keep-Alive: timeout=5, max=6
+Connection: Keep-Alive
+ ctid 2 uncompressed-len 0 net-response-time-onstart 27 net-response-time-onstop 30   ?E
