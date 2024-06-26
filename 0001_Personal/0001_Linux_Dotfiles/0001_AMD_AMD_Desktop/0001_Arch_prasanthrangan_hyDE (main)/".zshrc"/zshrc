@@ -83,7 +83,7 @@ alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also t
 
 
 
-# System update, upgrades, package search, etc.
+# System update, upgrades, package search, etc. commands
 alias upd='sudo pacman -Syu' # Update using pacman
 alias pac='sudo pacman -S' # Install package using pacman
 alias updnew='sudo pacman -Syyu' # Refresh nurrirs and update using pacman
@@ -99,7 +99,7 @@ alias rem='yay -R' # Remove a package using yay
 
 
 
-# General setup
+# General setup commands 
 alias sudo='sudo ' # Facilitate sudo command
 alias c='clear' # Clear the terminal
 alias h='history' # Output the terminal session hystory in the terminal
@@ -119,7 +119,7 @@ alias mkdir='mkdir -p' # Creates parent directory if needed
 
 
 
-# System navigation setup
+# System navigation setup commands
 alias .1='cd ..'
 alias .2='cd ../..'
 alias .3='cd ../../..'
@@ -129,7 +129,7 @@ alias .6='cd ../../../../../..'
 
 
 
-# System navigation
+# System navigation commands 
 alias downloads='cd ~/Downloads' # Change directory into ~Downloads
 alias lib='cd /usr/lib' # Change directory into /usr/lib
 alias share='cd /usr/share' # Change directory into /usr/share
@@ -137,7 +137,7 @@ alias config='cd ~/.config/' # Change directory into ~/.config
 
 
 
-# Version control
+# Version control commands
 alias clone='git clone' # Clone a github repo
 alias clonedepth1='git clone --depth=1' # Clone a github repos only the last commit
 alias gac='git add -A && git commit -m "directory management" && git push' # Push changes to a github repos with a generic messages
@@ -147,7 +147,7 @@ alias gpamain='cd /home/krit/0001_Github_Repos && ./gitpullmain.sh'  # Find all 
 
 
 
-# Repositories navigation
+# Repositories navigation commands
 alias setup='cd /home/krit/0001_Github_Repos/0001_Linux_Setup' # Change directory into the linux setup github repos
 alias personal='cd /home/krit/0001_Github_Repos/0002_Personal_Repos' # Change directory into the personal github repos
 alias work='cd /home/krit/0001_Github_Repos/0003_Work' # Change directory into the work github repos
@@ -185,6 +185,9 @@ alias HyDEupd='cd ~/HyDE/Scripts && git pull && ./install.sh -r' # Update last c
 alias HyDErestore='Hyde restore ...' # Update last changes from HyDE with restore and backup options
 alias HyDEthemes='Hyde theme patch' # Go again through the installation of themes and choice of sddm themes
 
+
+# Other configuration helper commands
+alias wallpaperfix='swwwallpaper.sh' # Force to apply the current swww wallpaper, for example if it is black, eg not displaying. Alternative to system reboot
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir) (original from HyDE) 
 #alias mkdir='mkdir -p' , already present, ignored
