@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 
 # System update, upgrades, package search, etc. commands
 alias upd='brew update && brew upgrade' # Update and upgrade using Homebrew
-alias install='brew install' # Install package using Homebrew
+alias inst='brew install' # Install package using Homebrew
 alias search='brew search' # Search a package using Homebrew
 alias brewcache='brew cleanup' # Clear the package cache, freeing disk space
 
