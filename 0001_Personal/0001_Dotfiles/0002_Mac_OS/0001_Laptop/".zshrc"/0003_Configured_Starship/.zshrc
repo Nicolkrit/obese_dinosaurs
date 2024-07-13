@@ -182,6 +182,9 @@ pokemon-colorscripts --no-title -r 1,3,6 # Display a random pokemon without the 
 # Thefuck
 eval $(thefuck --alias) # Enable thefuck to run in the terminal
 
+# Starship
+eval "$(starship init zsh)"
+
 
 # Zsh sintax highligtning
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
