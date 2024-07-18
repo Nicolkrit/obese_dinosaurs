@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # System update, upgrades, package search, etc. commands
 alias upd='brew update && brew upgrade' # Update and upgrade using Homebrew
 alias inst='brew install' # Install package using Homebrew
+alias instcask='brew cask install' # Install a cask package using Homebrew
 alias search='brew search' # Search a package using Homebrew
 alias brewcache='brew cleanup' # Clear the package cache, freeing disk space
 
@@ -138,6 +139,8 @@ alias del='sudo rm -r' # Remove a file or a directory recursively
 alias cp='cp -i' # Ask user confirmation before overwriting existing files
 alias mkdir='mkdir -p' # Creates parent directory if needed
 
+alias aliasdelete='find . -type l -print -delete' # Find and delete all aliases in current and subdirectories
+
 # System navigation setup commands
 alias .1='cd ..'
 alias .2='cd ../..'
@@ -163,6 +166,10 @@ alias setup='cd ~/0001_Github_Repos/0001_MacOS_Setup' # Change directory into th
 alias personal='cd ~/0001_Github_Repos/0002_Personal_repos' # Change directory into the personal projects
 alias work='cd ~/0001_Github_Repos/0003_Work' # Change directory into the work projects
 alias various='cd ~/0001_Github_Repos/0004_Various' # Change directory into various projects
+
+# Utilities
+alias youtube='youtube-dl -f bestvideo+bestaudio' # Download the best audio and video from a YouTube video
+alias htop='sudo htop' # Run htop with sudo
 
 # Fun commands
 alias pokdialga='pokemon-colorscripts --name dialga' # Output Dialga in the shell
