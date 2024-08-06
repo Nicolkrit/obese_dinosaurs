@@ -1,0 +1,22 @@
+{{/* Verifica comando */}}
+{{if eq (len .CmdArgs) 1}}
+  {{/* Cerca l'id dell'utente menzionato */}}
+  {{$user := userArg (index .CmdArgs 0)}}
+  {{if $user}}
+    {{/* Cerca nel database */}}
+    {{$friendcode := dbGet $user.ID "friendcode"}}
+    {{if $friendcode}}
+      {{/* Manda il messaggio in DM */}}
+      {{sendDM (print "Il codice amico di " $user.Username " è " $friendcode.Value)}}
+    {{else}}
+      {{sendDM (print $user.Username " non ha impostato nessun codice.")}}
+    {{end}}
+  {{else}}
+    {{sendDM "Utente non trovato."}}
+  {{end}}
+{{else}}
+  {{sendDM "Utilizzo: y!ca @utente"}}
+{{end}}
+ 
+{{/* Elimina il messaggio del comando */}}
+{{deleteTrigger 0}}

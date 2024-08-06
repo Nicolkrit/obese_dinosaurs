@@ -1,0 +1,39 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Links",
+            "footer": {
+                "text": "Kappa",
+                "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
+                "icon_url": "https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64"
+            },
+            "fields": [
+                {
+                    "value": "- [Instagram](https://www.instagram.com/mk8ticino/)\n- [whatsapp](https://chat.whatsapp.com/J1PPtOehOKTFowexAi302w)",
+                    "name": "**Socials**",
+                    "inline": true
+                },
+                {
+                    "value": "- [classifica](https://www.instagram.com/p/C9nX-ZTNaHp/?img_index=1)",
+                    "name": "**Tornei**",
+                    "inline": true
+                },
+                {
+                    "value": "[foto - video](https://drive.proton.me/urls/ZMK2NCEM2M#EkHDDXIuQwXf)",
+                    "name": "**Contenuti multimediali**",
+                    "inline": true
+                },
+                {
+                    "value": "- [Problemi della funzionalità della community](https://dyno.gg/form/a0236c3c)\n\n- [Problemi con un Mod](https://dyno.gg/form/dd181b5e)\n\n- [Appello al ban e mute](https://dyno.gg/form/f72df457)",
+                    "name": "**Formulari**",
+                    "inline": false
+                }
+            ],
+            "description": "Tutti i link utili per la community | [linktree](https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fmariokarticino&e=AT03EW4dYGwD4PVj8LnwOrF-58Nd-nFGXk4sXysJxZ8JmxLOvnwqKt0zkug2aRckP1kHBb8ma7WREh6_8s10T2t9E6Z0iijMnhx06xIHji3Aha01ukDicg)",
+            "content_scan_version": 1,
+            "color": 4904682
+        }
+    ]
+}

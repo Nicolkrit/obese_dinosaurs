@@ -1,0 +1,29 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Ruoli",
+            "footer": {
+                "text": "Kappa",
+                "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
+                "icon_url": "https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64"
+            },
+            "fields": [
+                {
+                    "value": "<@&1268614105778884638>:\n- Come narra la leggenda controllano il mondo senza che nessuno se ne accorge.\n- Non fateli arrabbiare o potrebbero lanciarvi delle blue shell.\n\n<@&1270080282623738039>:\n- Il risultato dell'incrocio tra <@884468943421603840> e ✨. Possono fare tutto ma il capo [Dietrich Kluge](https://insidejob.fandom.com/wiki/Dietrich_Kluge) osserva attentamente il loro operato.\n- Se si comportano bene potrebbero essere elevati al ruolo di <@&1268614105778884638>.\n\n<@&1268614256060792944>:\n- Pensano di essere meglio degli <@&1268614105778884638> ma è stato provato più volte che non è il caso.\n- [Gigi Thompson](https://insidejob.fandom.com/wiki/Gigi_Thompson) ci ha provato a mandare la candidatura per diventare un* <@&1268614105778884638> ma senza successo.\n - Se credi di essere un* candidat* migliore visita <#1268891349659287642>",
+                    "name": "**Organizzazioni ombra**",
+                    "inline": true
+                },
+                {
+                    "value": "<@&1269406204791230515>:\n- Sono troppo pover* per pagarsi un'app di musica dedicata.\n- Litigano tutto il tempo su che canzoni mettere.\n\n<@&1268898776861376512>:\n- Sprecano soldi comprando le schede micro sd della nintendo pensando che sono le uniche compatibili.\n- Figl* di papà.\n\n<@&1268631508579516508>:\n- Giocano tutto il giorno a Mario kart.\n- Non sanno il 90% delle scorciat(r)oie e usano le moto, vincono comunque. La vita è un mistero.\n\n<@&1268720484187373618>:\n- Hanno tanta voglia di imparare.\n- La maggior parte abbandona dopo poco, ma chi grinda potrebbe battere un <@&1268631508579516508> e dimostrarsi degn* del ruolo.\n - Se pensi di meritarlo puoi richiederlo sotto <#1268891349659287642>.\n\n<@&1269645498910773368>:\n- Pensano di essere importanti perché possono scegliere i ruoli.\n- In realtà tutto il loro operato (solitamente sbagliato) è controllato dagli <@&1268614105778884638>.",
+                    "name": "**Popolo**",
+                    "inline": true
+                }
+            ],
+            "description": "Visto che non vi considerate dei semplici <@&1268613427841077270> ecco una guida sui ruoli",
+            "content_scan_version": 1,
+            "color": 4904682
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Introduzione e Regole",
+            "footer": {
+                "text": "Kappa",
+                "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
+                "icon_url": "https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64"
+            },
+            "fields": [
+                {
+                    "value": "```\nTratta tutti i membri con rispetto.\n\nEvita insulti, offese o linguaggio discriminatorio.\n\nNon tolleriamo comportamenti molesti o intimidatori.\n```",
+                    "name": "**Rispetto e Cortesia**",
+                    "inline": true
+                },
+                {
+                    "value": "``````Non chiedere informazioni personali sugli altri membri se queste potrebbero avere effetti negativi.\n\nSegnala immediatamente agli amministratori eventuali comportamenti sospetti.\n```",
+                    "name": "**Privacy e sicurezza**",
+                    "inline": true
+                },
+                {
+                    "value": "```\nNon pubblicare contenuti inappropriati, volgari o violenti.\n\nNon condividere link a materiale illegale o pirata.\n\nMantieni le discussioni su argomenti appropriati al canale.\n```",
+                    "name": "**Contenuti appropriati**",
+                    "inline": true
+                },
+                {
+                    "value": "```\nUsa i canali corretti per i diversi tipi di discussione.\n\nRispetta le indicazioni degli amministratori e moderatori.\n\nNon richiedere ruoli o privilegi speciali senza motivo.\n```",
+                    "name": "**Canali e ruoli**",
+                    "inline": true
+                },
+                {
+                    "value": "```\nRispetta le regole specifiche di ogni torneo o competizione.\n\nGioca in modo leale e sportivo.\n\nSegui le istruzioni degli organizzatori dei tornei.\n```",
+                    "name": "**Tornei e competizioni**",
+                    "inline": true
+                },
+                {
+                    "value": "```\nIl team si riserva il diritto di modificare le regole in qualsiasi momento.\n\nLe modifiche saranno prontamente annunciate.\n```",
+                    "name": "**Modifiche alle regole**",
+                    "inline": true
+                },
+                {
+                    "value": "Per segnalare un utente usare\n**/report @[utente]** nel canale <#1269829149774712964>\n\n<@&1268614105778884638> <@&1270080282623738039>, <@&1268614256060792944> e <@&1268614465969066076> sono immuni.\n\nIn caso di problemi con un <@&1268614256060792944> visitare il seguente link.\n\nVi auguro un buon soggiorno nella nostra community.",
+                    "name": "**Segnalazioni e Immunità**",
+                    "inline": false
+                }
+            ],
+            "description": "Benvenuti su MK8 Ticino, un luogo dedicato agli appassionati di Mario Kart 8!\n\nQui troverai:\n - risorse per giocare insieme | <#1268630494728159375>\n- annunci per i prossimi tornei | <#1268731648409731153> \n- gli ultimi aggiornamenti delle classifiche. | <#1269458039505817600> \n\nUsando in questo server, accetti di rispettare i:\n-[Termini di servizio di discord](https://discord.com/terms)\n-[Linee guida della comunità di Discord](https://discord.com/terms)\n- Le nostre regole descritte sotto",
+            "content_scan_version": 1,
+            "color": 4904682
+        }
+    ]
+}

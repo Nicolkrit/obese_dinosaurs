@@ -1,0 +1,23 @@
+{{/* Verifica comando */}}
+{{if eq (len .CmdArgs) 2}}
+  {{/* Ricerca utente menzionato */}}
+  {{$user := userArg (index .CmdArgs 0)}}
+  {{/* Controlla se l'utente menzionato è chi sta facendo il comando */}}
+  {{if eq $user.ID .User.ID}}
+    {{/* Regex per la validità (inizia con sw- e ha solo numeri nel formato xxxx-xxxx-xxxx) */}}
+    {{if reFind `^sw-\d{4}-\d{4}-\d{4}$` (index .CmdArgs 1)}}
+      {{/* Assegna il codice amico al id dell'utente menzionato */}}
+      {{dbSet $user.ID "friendcode" (index .CmdArgs 1)}}
+      {{sendDM (print "Codice amico impostato per " $user.Username ".")}}
+    {{else}}
+      {{sendDM "Per favore inserire un codice nel formato sw-xxxx-xxxx-xxxx (solo cifre)."}}
+    {{end}}
+  {{else}}
+    {{sendDM "Puoi solo impostare il tuo codice amico."}}
+  {{end}}
+{{else}}
+  {{sendDM "Utilizzo: y!ica @utente sw-xxxx-xxxx-xxxx"}}
+{{end}}
+ 
+{{/* Elimina il messaggio del comando */}}
+{{deleteTrigger 0}}

@@ -1,0 +1,24 @@
+{{/*
+    Comando: y!rr
+    Descrizione: L'utente menziona un ruolo e se è permesso viene mandato ai moderatori
+*/}}
+ 
+{{$allowedRoles := cslice 1268631508579516508 1268614256060792944}}  {{/* Espert, Mod */}}
+{{$roleRequestChannelID := 1269469741748060222}}  {{/* ID del canale per le notifiche al team di moderazione */}}
+{{$args := parseArgs 1 "Utilizzo: y!rr @ruolo" (carg "role" "Role")}}
+ 
+{{if $args.IsSet 0}}
+    {{$requestedRole := ($args.Get 0)}}
+    {{if in $allowedRoles $requestedRole.ID}}
+        {{$modMessage := print "L'utente <@" .User.ID "> sta richiedendo il ruolo " $requestedRole.Mention}}
+        {{sendMessage $roleRequestChannelID $modMessage}}
+        {{$dmMessage := print "La tua richiesta per il ruolo è stata inviata al team di moderazione."}}
+        {{sendDM $dmMessage}}
+    {{else if not (in $allowedRoles $requestedRole.ID)}}
+        {{$errorMessage := print "Il ruolo non è disponibile per la richiesta. Selezionare Espert* o Mod. Per gli altri ruoli usare l'onboarding"}}
+        {{sendDM $errorMessage}}
+    {{end}}
+{{else}}
+    {{sendDM "Utilizzo: y!rr @ruolo"}}
+{{end}}
+{{deleteTrigger 0}}  {{/* Cancella il messaggio dell'utente */}}

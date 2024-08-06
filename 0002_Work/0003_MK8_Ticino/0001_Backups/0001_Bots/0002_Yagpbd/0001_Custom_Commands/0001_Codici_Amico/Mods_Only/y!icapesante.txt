@@ -1,0 +1,16 @@
+{{/* Verifica comando */}}
+{{if eq (len .CmdArgs) 2}}
+  {{/* Regex per la validità (inizia con sw- e ha solo numeri nel formato xxxx-xxxx-xxxx) */}}
+  {{if reFind `^sw-\d{4}-\d{4}-\d{4}$` (index .CmdArgs 1)}}
+    {{/* Assegna il codice amico al id dell'utente menzionato */}}
+    {{$user := userArg (index .CmdArgs 0)}}
+    {{if $user}}
+      {{dbSet $user.ID "friendcode" (index .CmdArgs 1)}}
+      Codice amico impostato per {{$user.Username}}.
+    {{end}}
+  {{else}}
+    Per favore inserire un codice nel formato sw-xxxx-xxxx-xxxx (solo cifre).
+  {{end}}
+{{else}}
+  Utilizzo: y!icapesante @utente sw-xxxx-xxxx-xxxx
+{{end}}
