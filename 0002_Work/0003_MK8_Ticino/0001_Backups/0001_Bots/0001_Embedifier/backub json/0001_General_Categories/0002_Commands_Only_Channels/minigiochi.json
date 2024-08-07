@@ -1,0 +1,69 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Comandi minigiochi",
+            "footer": {
+                "text": "Kappa",
+                "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
+                "icon_url": "https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64"
+            },
+            "fields": [
+                {
+                    "value": "```/rps```\n> Gioca sasso carta forbice con <@155149108183695360>\n\n> Variabili:\n- [choice] (scelta)\n - rock (roccia)\n - paper (carta)\n - scissor (forbice)\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/flip```\n> Descrizione comando\n- Lancia una moneta.\n\n> Variabili:\n- Nessuna\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/space```\n> Descrizione comando\n- Ottieni informazioni sulla stazione spaziale.\n\n> Variabili:\n- Nessuna\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/dadjoke```\n> Descrizione comando\n- Ottieni una battuta casuale.\n\n> Variabili:\n- Nessuna\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/cat```\n> Descrizione comando\n- Mostra un'immagine di un gatto.\n\n> Variabili:\n- Nessuna\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/pug```\n> Descrizione comando\n- Mostra un immagine di un carlino.\n\n> Variabili:\n- Nessuna\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/itunes```\n> Descrizione comando\n- Ottieni informazioni su una canzone.\n\n> Variabili:\n- [song] | nome canzone\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/dog```\n> Descrizione comando\n- Mostra un'immagine di un cane.\n\n> Variabili:\n- Nessuna\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/pokemon```\n> Descrizione comando\n- Ottieni informazioni sui Pokémon.\n\n> Variabili:\n- [name] | nome del pokemon\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/```\n- Se alcuni comandi non sono disponibili è perché sono stati disattivati da <@&1268614105778884638>",
+                    "name": "**Altri comandi**",
+                    "inline": true
+                }
+            ],
+            "description": "Comandi per minigiochi.\n\nIn caso di problemi con i comandi compilare il seguente [formulario](https://dyno.gg/form/a0236c3c)",
+            "content_scan_version": 1,
+            "color": 4904682
+        }
+    ]
+}

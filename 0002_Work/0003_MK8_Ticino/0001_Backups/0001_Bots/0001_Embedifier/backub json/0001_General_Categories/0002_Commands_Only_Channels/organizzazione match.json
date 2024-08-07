@@ -1,0 +1,29 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Comandi MK8 Random Part builder",
+            "footer": {
+                "text": "Kappa",
+                "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
+                "icon_url": "https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64"
+            },
+            "fields": [
+                {
+                    "value": "```/gen-build```\n> Descrizione comando\n- Genera un numero x di build random per switch (MK8 DX) o wii U (MK8) usando <@836318982080167946>\n\n> Variabili:\n- [game version] | versione gioco\n - Switch\n - WiiU\n- [exclude-inline-bikes] | Escludi moto a  guida interna\n - No\n - Yes\n- [amount] | Ammontare (opzionale)\n - mettere un numero qualsiasi tra 1 e 12 (ogni programma ha un limite ma non so quanto è per questo bot)\n\n> Informazioni aggiuntive:\n- Mettere l'amount come 1 mostra le statistiche complete (incluse le nascoste)\n - Siamo troppo poveri quindi li potrete runnare ma vi darà errore",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/```\n- Se alcuni comandi non sono disponibili è perché sono stati disattivati da <@&1268614105778884638>",
+                    "name": "**Altri comandi**",
+                    "inline": true
+                }
+            ],
+            "description": "Comandi per generare delle build casuali.\n\nIn caso di problemi con il comando compilare il seguente [formulario](https://dyno.gg/form/a0236c3c)",
+            "content_scan_version": 1,
+            "color": 4904682
+        }
+    ]
+}

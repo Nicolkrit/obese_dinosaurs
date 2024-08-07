@@ -1,5 +1,7 @@
 colore: #4ad6ea = 4904682 
 
-Trofeo castagna: https://cdn.discordapp.com/icons/1268607478967435337/934704f3b468f684d88cbeae045c84a1.webp?size=240
+Trofeo castagna: 
+    https://cdn.discordapp.com/icons/1268607478967435337/934704f3b468f684d88cbeae045c84a1.webp?size=240
 
-Kappa: https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64
+Kappa: 
+    https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64

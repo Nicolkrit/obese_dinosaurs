@@ -1,0 +1,34 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Comandi spazio dj",
+            "footer": {
+                "text": "Kappa",
+                "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
+                "icon_url": "https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64"
+            },
+            "fields": [
+                {
+                    "value": "```/help```\n> Descrizione comando\n- Mostra un menù a tendina con le varie categorie di comandi\n\n> Variabili:\n- Nessuna\n\n> Informazioni aggiuntive:\n- Alcuni comandi sono solo per il piano premium\n - Siamo troppo poveri quindi li potrete runnare ma vi darà errore",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/buttons```\n> Descrizione comando\n- Mostra un gestore della musica con vari bottoni\n - traccia precedente | riproduci/pausa | prossima traccia\n - muto | volume giù | volume sù\n - liriche (premium) | salva nei tuoi preferiti | attiva/disattiva autoplay\n - ripeti la traccia | ferma la coda | riordina casualmente la coda\n\n\n> Variabili:\n- Nessuna\n\n> Informazioni aggiuntive:\n- Alcuni comandi sono solo per il piano premium\n - Siamo troppo poveri quindi li potrete runnare ma vi darà errore",
+                    "name": "",
+                    "inline": true
+                },
+                {
+                    "value": "```/```\n- Se alcuni comandi non sono disponibili è perché sono stati disattivati da <@&1268614105778884638>",
+                    "name": "**Altri comandi**",
+                    "inline": true
+                }
+            ],
+            "description": "Comandi per mettere musica nel canale <#1268980181838856204>\n\nIn caso di problemi con i comandi compilare il seguente [formulario](https://dyno.gg/form/a0236c3c)",
+            "content_scan_version": 1,
+            "color": 4904682
+        }
+    ]
+}

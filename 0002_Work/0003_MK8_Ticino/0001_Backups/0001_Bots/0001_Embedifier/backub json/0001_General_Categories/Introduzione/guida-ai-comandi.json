@@ -1,0 +1,17 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Guida ai comandi",
+            "footer": {
+                "text": "Kappa",
+                "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
+                "icon_url": "https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64"
+            },
+            "description": "Tramite l'aiuto di <@866057672541732894> la guida ai comandi sono visibili e permessi nei seguenti canali per i seguenti ruoli:\n- <#1268891349659287642> | @everyone \n- <#1268943776609730731> | <@&1269406204791230515> \n- <#1268610710389260299> | se avete selezionato gli argomenti <#1268610393417191425>\n- <#1268610729909682228> | se avete selezionato gli argomenti <#1268610393417191425>\n- <#1268741825934655598>| <@&1268898776861376512> \n- <#1268898728228687924> |  <@&1268898776861376512> \n\nSe un canale non è disponibile può essere per una di queste ragioni:\n- Non avete scelto i ruoli/canali giusti sotto <id:customize> \n- Non avete i permessi e non potete sceglierli perché gli <@&1268614105778884638> non si fidano\n - Potreste provare ad avere diritti maggiorati ottenendo il ruolo di <@&1268614256060792944> facendo la richiesta sotto <#1268891349659287642>",
+            "content_scan_version": 1,
+            "color": 4904682
+        }
+    ]
+}

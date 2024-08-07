@@ -3,7 +3,7 @@
     "embeds": [
         {
             "type": "rich",
-            "title": "MK8 Ticino | Introduzione e Regole",
+            "title": "MK8 Ticino | Introduzione e regole",
             "footer": {
                 "text": "Kappa",
                 "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
@@ -16,7 +16,7 @@
                     "inline": true
                 },
                 {
-                    "value": "``````Non chiedere informazioni personali sugli altri membri se queste potrebbero avere effetti negativi.\n\nSegnala immediatamente agli amministratori eventuali comportamenti sospetti.\n```",
+                    "value": "```Non chiedere informazioni personali sugli altri membri se queste potrebbero avere effetti negativi.\n\nSegnala immediatamente agli amministratori eventuali comportamenti sospetti.\n```",
                     "name": "**Privacy e sicurezza**",
                     "inline": true
                 },
@@ -41,7 +41,7 @@
                     "inline": true
                 },
                 {
-                    "value": "Per segnalare un utente usare\n**/report @[utente]** nel canale <#1269829149774712964>\n\n<@&1268614105778884638> <@&1270080282623738039>, <@&1268614256060792944> e <@&1268614465969066076> sono immuni.\n\nIn caso di problemi con un <@&1268614256060792944> visitare il seguente link.\n\nVi auguro un buon soggiorno nella nostra community.",
+                    "value": "Per segnalare un utente usare\n**/report @[utente]** nel canale <#1269829149774712964>\n\n<@&1268614105778884638> <@&1270080282623738039>, <@&1268614256060792944> e <@&1268614465969066076> sono immuni.\n\nIn caso di problemi con un <@&1268614256060792944> visitare il seguente [link](https://dyno.gg/form/dd181b5e).\n\nVi auguro un buon soggiorno nella nostra community.",
                     "name": "**Segnalazioni e Immunità**",
                     "inline": false
                 }

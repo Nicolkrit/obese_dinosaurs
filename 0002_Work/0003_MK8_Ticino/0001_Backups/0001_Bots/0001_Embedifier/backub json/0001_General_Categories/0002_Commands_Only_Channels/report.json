@@ -1,0 +1,24 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Comandi segnalazione utenti",
+            "footer": {
+                "text": "Kappa",
+                "proxy_icon_url": "https://images-ext-1.discordapp.net/external/v7f8uoChJ7uyQ8oVqVeyG4Eey43QjoiIeLlMhCJAlko/%3Fsize%3D64/https/cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp",
+                "icon_url": "https://cdn.discordapp.com/avatars/884468943421603840/ce94d3b3536d1dfd206c2f0041a90581.webp?size=64"
+            },
+            "fields": [
+                {
+                    "value": "```/report```\n> Descrizione comando\n- Prompta l'utente a compilare un formulario per segnalare un utente/messaggio usando il bot <@678344927997853742>\n\n> Variabili:\n- [user_or_message] | utente o messaggio\n - user (utente) | usare @\n - message (messaggio) | tasto destro sul messaggio -> copia link -> incolla link\n- reason (ragione) | scrivere la propria o scegliere tra:\n - Spam (spam)\n - Insults (insulto)\n - Advertisements (pubblicità)\n- Comments (commento) | opzionale\n - Inserire un commento aggiuntivo\n- Attachments (Allegato) | opzionale\n - Inserire un allegato come prova\n\n> Informazioni aggiuntive:\n- Nessuna",
+                    "name": "",
+                    "inline": true
+                }
+            ],
+            "description": "Comandi per segnalare un utente o un messaggio.\n\nIn caso di problemi con il comando compilare il seguente [formulario](https://dyno.gg/form/a0236c3c)",
+            "content_scan_version": 1,
+            "color": 4904682
+        }
+    ]
+}
