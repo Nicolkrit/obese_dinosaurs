@@ -1,0 +1,40 @@
+{
+    "content": "",
+    "embeds": [
+        {
+            "type": "rich",
+            "title": "MK8 Ticino | Torneo",
+            "fields": [
+                {
+                    "value": "Nome posto/casa\nVia\nCap, Paese\n\nhh:mm (24 format)",
+                    "name": "Luogo, data e ora",
+                    "inline": true
+                },
+                {
+                    "value": "- Costo: \n - xx.xx CHF\n- Metodi di pagamento:\n - Metodo 1\n - Metodo 2\n - Metodo x",
+                    "name": "**Costi**",
+                    "inline": true
+                },
+                {
+                    "value": "- CC:\n - 50/10/1500cc\n- Squadre: \n - Sfida individuale/di gruppo\n- Oggetti: \n - X\n- CPU: \n - Facile/Normale/Difficile\n- Veicoli:\n - X\n- Guida assistita: \n - ❌/✅",
+                    "name": "**⭐️ Formato del torneo ⭐️**",
+                    "inline": false
+                },
+                {
+                    "value": "- Contattare la pagina [instagram](https://www.instagram.com/mk8ticino/)\n- Oppure inviare una e-mail | mk8ticino@gmail.com\n\n- Per l'iscrizione è necessario:\n - Nome\n - Cognome\n - Nickname/soprannome (se applicabile)\n\n• Età minima:\n - XX anni\n\nVi verrà inviata una conferma d'iscrizione entro 48h.",
+                    "name": "**📨 Iscrizione📨**",
+                    "inline": true
+                },
+                {
+                    "value": "- Ringraziamo [nome](sito) per ospitarci",
+                    "name": "**Ringraziamenti**",
+                    "inline": false
+                }
+
+            ],
+            "description": "Il nostro team è felice di annunciarvi il prossimo torneo.\n\nEcco le informazioni più importanti.\n\nIn caso di dubbi potete scrivere sotto <#1268627514121523342> .\n\nVi auguro un buon divertimento.",
+            "content_scan_version": 0,
+            "color": 4904682
+        }
+    ]
+}
