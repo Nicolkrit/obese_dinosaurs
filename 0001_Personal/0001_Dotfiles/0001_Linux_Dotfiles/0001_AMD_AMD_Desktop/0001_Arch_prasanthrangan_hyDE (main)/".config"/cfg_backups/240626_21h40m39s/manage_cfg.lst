@@ -1,0 +1,46 @@
+P|${HOME}|.zshrc|zsh oh-my-zsh-git zsh-theme-powerlevel10k pokemon-colorscripts-git
+P|${HOME}|.p10k.zsh|zsh oh-my-zsh-git zsh-theme-powerlevel10k pokemon-colorscripts-git
+P|${HOME}/.config/Code/User|settings.json|visual-studio-code-bin
+P|${HOME}/.config/Code - OSS/User|settings.json|code
+P|${HOME}/.config|code-flags.conf|visual-studio-code-bin
+P|${HOME}/.config|code-flags.conf|code
+P|${HOME}/.config|spotify-flags.conf|spotify
+S|${HOME}/.config|dunst|dunst
+S|${HOME}/.config|fish|fish
+S|${HOME}/.config/hyde|wallbash|hyprland
+S|${HOME}/.config/hypr|animations.conf|hyprland
+S|${HOME}/.config/hypr|hyprland.conf|hyprland
+S|${HOME}/.config/hypr|windowrules.conf|hyprland
+S|${HOME}/.config/hypr|themes|hyprland
+P|${HOME}/.config/hypr|keybindings.conf|hyprland
+P|${HOME}/.config/hypr|monitors.conf|hyprland
+P|${HOME}/.config/hypr|userprefs.conf|hyprland
+P|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-utils
+S|${HOME}/.local/share|bin|hyprland
+S|${HOME}/.config|kitty|kitty
+S|${HOME}/.config|Kvantum|kvantum
+S|${HOME}/.config|lsd|lsd
+S|${HOME}/.config|MangoHud|mangohud
+S|${HOME}/.config|fastfetch|fastfetch
+S|${HOME}/.config|qt5ct|qt5ct
+S|${HOME}/.config|qt6ct|qt6ct
+S|${HOME}/.config|rofi|rofi
+S|${HOME}/.config|swaylock|swaylock-effects
+S|${HOME}/.config/waybar|modules|waybar
+S|${HOME}/.config/waybar|config.jsonc|waybar
+S|${HOME}/.config/waybar|style.css|waybar
+S|${HOME}/.config/waybar|theme.css|waybar
+S|${HOME}/.config/waybar|config.ctl|waybar
+S|${HOME}/.config|wlogout|wlogout
+S|${HOME}/.config|xsettingsd|nwg-look
+S|${HOME}/.config|nwg-look|nwg-look
+S|${HOME}/.config|gtk-3.0|nwg-look
+S|${HOME}/.icons|default|nwg-look
+S|${HOME}|.gtkrc-2.0|nwg-look
+S|${HOME}/.config|dolphinrc|dolphin
+S|${HOME}/.config|kdeglobals|dolphin
+S|${HOME}/.config/menus|applications.menu|dolphin
+S|${HOME}/.local/share|dolphin|dolphin
+S|${HOME}/.local/share/kxmlgui5|dolphin|dolphin
+S|${HOME}/.local/share/kio/servicemenus|hydewallpaper.desktop|dolphin
+P|${HOME}/.config|libinput-gestures.conf|libinput-gestures

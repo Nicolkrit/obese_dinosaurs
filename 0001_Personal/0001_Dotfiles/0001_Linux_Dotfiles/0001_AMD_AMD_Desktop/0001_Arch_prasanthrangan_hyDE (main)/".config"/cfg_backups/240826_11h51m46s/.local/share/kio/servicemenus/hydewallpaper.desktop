@@ -1,0 +1,81 @@
+[Desktop Entry]
+Type=Service
+MimeType=image/png;image/jpeg;image/jpg;image/gif
+Actions=Menu-Refresh;Catppuccin Mocha;Mac OS;Catppuccin Latte;Windows 11;Hack the Box;Rosé Pine;One Dark;Tokyo Night;Dracula;Material Sakura;Graphite Mono;Decay Green;Edge Runner;Frosted Glass;Gruvbox Retro;Synth Wave;Nordic Blue;AbyssGreen
+X-KDE-Submenu=Set As Wallpaper...
+
+[Desktop Action Menu-Refresh]
+Name=.: Refresh List :.
+Exec=swwwallkon.sh
+
+[Desktop Action Catppuccin Mocha]
+Name=Catppuccin Mocha
+Exec=swwwallkon.sh -t "Catppuccin Mocha" -w %u
+
+[Desktop Action Mac OS]
+Name=Mac OS
+Exec=swwwallkon.sh -t "Mac OS" -w %u
+
+[Desktop Action Catppuccin Latte]
+Name=Catppuccin Latte
+Exec=swwwallkon.sh -t "Catppuccin Latte" -w %u
+
+[Desktop Action Windows 11]
+Name=Windows 11
+Exec=swwwallkon.sh -t "Windows 11" -w %u
+
+[Desktop Action Hack the Box]
+Name=Hack the Box
+Exec=swwwallkon.sh -t "Hack the Box" -w %u
+
+[Desktop Action Rosé Pine]
+Name=Rosé Pine
+Exec=swwwallkon.sh -t "Rosé Pine" -w %u
+
+[Desktop Action One Dark]
+Name=One Dark
+Exec=swwwallkon.sh -t "One Dark" -w %u
+
+[Desktop Action Tokyo Night]
+Name=Tokyo Night
+Exec=swwwallkon.sh -t "Tokyo Night" -w %u
+
+[Desktop Action Dracula]
+Name=Dracula
+Exec=swwwallkon.sh -t "Dracula" -w %u
+
+[Desktop Action Material Sakura]
+Name=Material Sakura
+Exec=swwwallkon.sh -t "Material Sakura" -w %u
+
+[Desktop Action Graphite Mono]
+Name=Graphite Mono
+Exec=swwwallkon.sh -t "Graphite Mono" -w %u
+
+[Desktop Action Decay Green]
+Name=Decay Green
+Exec=swwwallkon.sh -t "Decay Green" -w %u
+
+[Desktop Action Edge Runner]
+Name=Edge Runner
+Exec=swwwallkon.sh -t "Edge Runner" -w %u
+
+[Desktop Action Frosted Glass]
+Name=Frosted Glass
+Exec=swwwallkon.sh -t "Frosted Glass" -w %u
+
+[Desktop Action Gruvbox Retro]
+Name=Gruvbox Retro
+Exec=swwwallkon.sh -t "Gruvbox Retro" -w %u
+
+[Desktop Action Synth Wave]
+Name=Synth Wave
+Exec=swwwallkon.sh -t "Synth Wave" -w %u
+
+[Desktop Action Nordic Blue]
+Name=Nordic Blue
+Exec=swwwallkon.sh -t "Nordic Blue" -w %u
+
+[Desktop Action AbyssGreen]
+Name=AbyssGreen
+Exec=swwwallkon.sh -t "AbyssGreen" -w %u
