@@ -90,6 +90,7 @@ alias updnew='sudo pacman -Syyu' # Refresh nurrirs and update using pacman
 alias search='pacman -Ss' # Search a package using pacman
 
 alias y='yay' # Update using yay
+alias ync='yay --noconfirm' # Update using yay without confirmations
 alias yaynew='yay -Syuu' # Refresh nurrirs and update using yay
 alias inst='yay -S' # Install a package using yay
 alias search='yay -Ss' # Search a package using yay
@@ -152,6 +153,9 @@ alias setup='cd /home/krit/0001_Github_Repos/0001_Linux_Setup' # Change director
 alias personal='cd /home/krit/0001_Github_Repos/0002_Personal_Repos' # Change directory into the personal github repos
 alias work='cd /home/krit/0001_Github_Repos/0003_Work' # Change directory into the work github repos
 alias other='cd /home/krit/0001_Github_Repos/0004_Various' # Change directory into the various github repos
+
+# Remote management
+alias mcbkrit='ssh krit@192.168.31.160' # Login into the mac book pro using ssh, password same as the macbook
 
 
 
