@@ -6,27 +6,27 @@
             "title": "MK8 Ticino | Torneo",
             "fields": [
                 {
-                    "value": "Nome posto/casa\nVia\nCap, Paese\n\nhh:mm (24 format)",
+                    "value": "- Casa/negozio\n- Via N/A\n- CAP N/A, paese N/A\n- hh:mm (24 hour format)",
                     "name": "Luogo, data e ora",
                     "inline": true
                 },
                 {
-                    "value": "- Costo: \n - xx.xx CHF\n- Metodi di pagamento:\n - Metodo 1\n - Metodo 2\n - Metodo x",
+                    "value": "- Costo: N/A CHF\n- Metodi di pagamento: Twint/contanti/N/A",
                     "name": "**Costi**",
                     "inline": true
                 },
                 {
-                    "value": "- CC:\n - 50/10/1500cc\n- Squadre: \n - Sfida individuale/di gruppo\n- Oggetti: \n - X\n- CPU: \n - Facile/Normale/Difficile\n- Veicoli:\n - X\n- Guida assistita: \n - ❌/✅",
+                    "value": "- CC: 50/100/150 cc\n- Squadre: ❌/✅\n- Oggetti: nessuno/custom/normali/frantici\n- CPU: nessuna/facile/medio/difficile\n- Veicoli: kart/moto/tutti\n- Guida assistita: \n - ❌/✅",
                     "name": "**⭐️ Formato del torneo ⭐️**",
                     "inline": false
                 },
                 {
-                    "value": "- Contattare la pagina [instagram](https://www.instagram.com/mk8ticino/)\n- Oppure inviare una e-mail | mk8ticino@gmail.com\n\n- Per l'iscrizione è necessario:\n - Nome\n - Cognome\n - Nickname/soprannome (se applicabile)\n\n• Età minima:\n - XX anni\n\nVi verrà inviata una conferma d'iscrizione entro 48h.",
+                    "value": "- Contattare la pagina [instagram](https://www.instagram.com/mk8ticino/)\n- Oppure inviare una e-mail | mk8ticino@gmail.com\n\n- Per l'iscrizione è necessario:\n - Nome\n - Cognome\n - Nickname/soprannome (se applicabile)\n\n• Età minima:\n - N/A anni\n\nVi verrà inviata una conferma d'iscrizione entro 48h.",
                     "name": "**📨 Iscrizione📨**",
                     "inline": true
                 },
                 {
-                    "value": "- Ringraziamo [nome](sito) per ospitarci",
+                    "value": "- Ringraziamo N/A per ospitarci",
                     "name": "**Ringraziamenti**",
                     "inline": false
                 }
